@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "PMModelObject",
+	"category" : "ProcessModel-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"tasks",
+		"inputTasks",
+		"outputTasks",
+		"isDeliverable"
+	],
+	"name" : "PMArtifact",
+	"type" : "normal"
+}

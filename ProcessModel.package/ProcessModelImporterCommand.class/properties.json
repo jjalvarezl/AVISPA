@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MoosePanelCommand",
+	"category" : "ProcessModel-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ProcessModelImporterCommand",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+accessing
+desviationToMeanOutputArtifacts: anObject
+	desviationToMeanOutputArtifacts := anObject

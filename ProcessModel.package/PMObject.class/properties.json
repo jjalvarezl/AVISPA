@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "MooseEntity",
+	"category" : "ProcessModel-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"id",
+		"elementName",
+		"presentationName",
+		"idBase"
+	],
+	"name" : "PMObject",
+	"type" : "normal"
+}

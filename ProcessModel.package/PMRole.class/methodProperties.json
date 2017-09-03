@@ -1,0 +1,19 @@
+{
+	"instance" : {
+		"mooseFinderRelatedRolesIn:" : "ahurtado 12/1/2016 01:03",
+		"numberOfAssociatedArtifacts" : "Julio Hurtado 10/10/2009 21:44",
+		"hasRoles" : "Julio Hurtado 10/8/2009 12:12",
+		"numberOfArtifacts" : "Julio Hurtado 10/7/2009 17:38",
+		"numberOfAssociatedTasks" : "ahurtado 11/27/2016 02:48",
+		"artifacts:" : "JhonJairoAlvarez 8/24/2017 20:25",
+		"addArtifact:" : "AlexandreBergel 2/22/2017 13:22",
+		"relatedRolesGroup" : "Julio Hurtado 11/3/2009 16:29",
+		"numberOfTasks" : "Julio Hurtado 10/7/2009 17:37",
+		"relatedRoles" : "Julio Hurtado 11/3/2009 16:26",
+		"artifacts" : "Julio Hurtado 10/7/2009 17:46",
+		"tasks" : "Julio Hurtado 10/7/2009 17:46"
+	},
+	"class" : {
+		"fromXMLDescription:" : "Julio Hurtado 1/2/2010 00:08"
+	}
+}

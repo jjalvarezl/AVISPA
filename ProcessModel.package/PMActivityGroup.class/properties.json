@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MooseGroup",
+	"category" : "ProcessModel-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"myModel"
+	],
+	"name" : "PMActivityGroup",
+	"type" : "normal"
+}

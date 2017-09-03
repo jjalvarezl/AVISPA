@@ -1,0 +1,42 @@
+{
+	"instance" : {
+		"checklistIds" : "Alexandre.Bergel 9/1/2009 11:31",
+		"isAbstract:" : "Alexandre.Bergel 9/1/2009 11:08",
+		"taskIds:" : "Julio Hurtado 10/7/2009 17:55",
+		"tasks:" : "Julio Hurtado 10/8/2009 09:06",
+		"variabilityType:" : "juliohurtado 9/14/2012 08:48",
+		"artifactOutputIds" : "Julio Hurtado 9/8/2009 18:12",
+		"taskIds" : "Julio Hurtado 10/7/2009 17:55",
+		"variabilityType" : "juliohurtado 9/14/2012 08:48",
+		"conceptIds" : "Alexandre.Bergel 9/1/2009 11:31",
+		"concepts:" : "Alexandre.Bergel 9/1/2009 11:30",
+		"artifactMandatoryInputIds" : "Alexandre.bergel 9/11/2009 11:47",
+		"guidelineIds:" : "Alexandre.Bergel 9/1/2009 11:32",
+		"isAbstract" : "Alexandre.Bergel 9/1/2009 11:08",
+		"popupText" : "Alexandre.Bergel 9/1/2009 11:23",
+		"guidelineIds" : "Alexandre.Bergel 9/1/2009 11:32",
+		"briefDescription" : "Alexandre.Bergel 9/1/2009 11:01",
+		"conceptIds:" : "Alexandre.Bergel 9/1/2009 11:31",
+		"artifactMandatoryInputIds:" : "Alexandre.bergel 9/11/2009 11:47",
+		"checklists:" : "Alexandre.Bergel 9/1/2009 11:30",
+		"artifactOutputs:" : "Julio Hurtado 9/8/2009 18:12",
+		"artifactOutputs" : "Julio Hurtado 9/8/2009 18:12",
+		"artifactOutputIds:" : "Julio Hurtado 9/8/2009 18:12",
+		"artifactIds" : "Julio Hurtado 9/8/2009 18:06",
+		"checklists" : "Alexandre.Bergel 9/1/2009 11:30",
+		"basedOn" : "juliohurtado 9/13/2012 17:50",
+		"concepts" : "Alexandre.Bergel 9/1/2009 11:30",
+		"guidelines:" : "Alexandre.Bergel 9/1/2009 11:29",
+		"roleIds:" : "Julio Hurtado 10/8/2009 11:21",
+		"briefDescription:" : "Alexandre.Bergel 9/1/2009 11:01",
+		"tasks" : "Julio Hurtado 10/8/2009 09:05",
+		"guidelines" : "Alexandre.Bergel 9/1/2009 11:29",
+		"artifactIds:" : "Julio Hurtado 9/8/2009 18:06",
+		"basedOn:" : "juliohurtado 9/13/2012 17:50",
+		"roleIds" : "Julio Hurtado 10/8/2009 11:21",
+		"checklistIds:" : "Alexandre.Bergel 9/1/2009 11:31"
+	},
+	"class" : {
+		"fromXMLDescription:" : "juliohurtado 9/14/2012 08:46"
+	}
+}
