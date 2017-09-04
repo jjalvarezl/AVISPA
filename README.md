@@ -77,11 +77,11 @@ By left clicking on *moose workspace* -> *monticello browser* or the keyboard sh
 
 In the monticello browser make click in *+Repository* -> *filetree* -> *Select the git cloned repository directory* -> *Ok*
 
-![Moose error: can not locate cairo library](ReadmeSources/ProcessModelInstallation1.png?raw=true "Moose error: can not locate cairo library")
+![Aiming to Process Model cloned repository](ReadmeSources/ProcessModelInstallation1.png?raw=true "Aiming to Process Model cloned repository")
 
 Once loaded the repository to monticello it is necessary to load the package to moose by clicking the *Load* button on the loaded repository window:
 
-![Moose error: can not locate cairo library](ReadmeSources/ProcessModelInstallation2.png?raw=true "Moose error: can not locate cairo library")
+![Opening Process Model package](ReadmeSources/ProcessModelInstallation2.png?raw=true "Opening Process Model package")
 
 
 ---
@@ -118,7 +118,7 @@ On the git package you can found some sample process XMLs. You can visualize som
 
 On the moose workspace *left click* -> *moose panel* -> *on moose panel click on the arrow located on superior right corner that does not have any text on it* -> *click on "import EPF Process with AVISPA and vAVISPA"*
 
-![Moose error: can not locate cairo library](ReadmeSources/XMLMooseImporting.png?raw=true "Moose error: can not locate cairo library")
+![Importing Process Model XML](ReadmeSources/XMLMooseImporting.png?raw=true "Importing Process Model XML")
 
 Now search the XML on ./XMLSamples/ and load it.
 
@@ -128,7 +128,7 @@ Now search the XML on ./XMLSamples/ and load it.
 
 You can visualize all software process model elements grouped by activities, tasks, roles and artifacts.
 
-![Moose error: can not locate cairo library](ReadmeSources/MoosePanelWithOpenedProcess1.png?raw=true "Moose error: can not locate cairo library")
+![Moose panel with process loaded](ReadmeSources/MoosePanelWithOpenedProcess1.png?raw=true "Moose panel with process loaded")
 
 As the above figure, you can click on *Activities* to view the list of activities asociated to the process.
 
@@ -144,9 +144,23 @@ You can explore all the AVISPA generated process blueprints.
 
 You can visualize AVISPA blueprints by right clicking on each process elements to show the AVISPA's menu and explore each menu element in order to visualize each process blueprint (as show in the below image).
 
-![Moose error: can not locate cairo library](ReadmeSources/MoosePanelWithOpenedProcess2.png?raw=true "Moose error: can not locate cairo library")
+![Moose menu blueprins sample](ReadmeSources/MoosePanelWithOpenedProcess2.png?raw=true "Moose menu blueprins sample")
 
 > For more information about each visualization you can get more information about conceptual issues can be founded in [this article](http://www.bergel.eu/download/papers/Berg13a-Avispa.pdf)
+
+### Screenshots
+
+#### Tasks:
+
+![Task blueprints sample](ReadmeSources/MoosePanelWithOpenedProcess3.png?raw=true "Task blueprints sample")
+
+#### Roles:
+
+![Role blueprints sample](ReadmeSources/MoosePanelWithOpenedProcess4.png?raw=true "Role blueprints sample")
+
+#### Artifacts:
+
+![Artifact blueprints sample](ReadmeSources/MoosePanelWithOpenedProcess5.png?raw=true "Artifact blueprints sample")
 
 ---
 
