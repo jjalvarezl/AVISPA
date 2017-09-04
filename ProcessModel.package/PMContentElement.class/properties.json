@@ -1,0 +1,28 @@
+{
+	"commentStamp" : "",
+	"super" : "PMObject",
+	"category" : "ProcessModel-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"briefDescription",
+		"isAbstract",
+		"variabilityType",
+		"concepts",
+		"guidelines",
+		"checklists",
+		"basedOn",
+		"artifactOutputs",
+		"conceptIds",
+		"guidelineIds",
+		"checklistIds",
+		"artifactOutputIds",
+		"taskIds",
+		"artifactMandatoryInputIds",
+		"roleIds",
+		"tasks"
+	],
+	"name" : "PMContentElement",
+	"type" : "normal"
+}

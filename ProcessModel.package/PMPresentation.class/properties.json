@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "PMModelObject",
+	"category" : "ProcessModel-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"concept",
+		"mainDescription"
+	],
+	"name" : "PMPresentation",
+	"type" : "normal"
+}

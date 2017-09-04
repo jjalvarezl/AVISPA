@@ -1,0 +1,24 @@
+{
+	"instance" : {
+		"isDeliverable" : "Julio Hurtado 12/2/2010 18:45",
+		"tasks:" : "Julio Hurtado 10/8/2009 09:29",
+		"numberOfAssociatedTasks" : "Julio Hurtado 10/8/2009 09:36",
+		"numberOfInputTasks" : "Julio Hurtado 10/8/2009 09:50",
+		"inputTasks:" : "Julio Hurtado 10/8/2009 09:48",
+		"outputTasks" : "Julio Hurtado 10/8/2009 10:00",
+		"outputArtifactsGroup" : "AlexandreBergel 2/22/2017 13:21",
+		"roles" : "LuisSilvestre 10/18/2012 19:00",
+		"numberOfRoles" : "LuisSilvestre 10/18/2012 19:00",
+		"outputTasksGroup" : "AlexandreBergel 2/22/2017 13:38",
+		"guidelines:" : "Julio Hurtado 10/11/2009 12:24",
+		"outputArtifacts" : "Julio Hurtado 12/3/2009 19:17",
+		"isDeliverable:" : "Julio Hurtado 12/2/2010 18:45",
+		"outputTasks:" : "Julio Hurtado 10/8/2009 09:49",
+		"tasks" : "Julio Hurtado 10/8/2009 09:30",
+		"inputTasks" : "Julio Hurtado 10/8/2009 10:00",
+		"numberOfOutputTasks" : "Julio Hurtado 10/8/2009 09:53"
+	},
+	"class" : {
+		"fromXMLDescription:" : "Julio Hurtado 1/2/2010 00:07"
+	}
+}

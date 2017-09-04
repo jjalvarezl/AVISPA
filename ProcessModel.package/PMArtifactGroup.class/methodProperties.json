@@ -1,0 +1,25 @@
+{
+	"instance" : {
+		"viewIndependentSubprojectPatternOn:" : "jjalvarezl 9/4/2017 18:21",
+		"viewArtifactBlueprintGuidanceOn:" : "jjalvarezl 9/4/2017 18:20",
+		"viewArtifactWithoutRoles" : "AlexandreBergel 2/22/2017 13:28",
+		"viewIndependentSubprojectPattern" : "ahurtado 11/30/2016 14:28",
+		"viewArtifactBlueprint" : "AlexandreBergel 2/22/2017 13:27",
+		"mooseFinderArtefactBlueprintIn:" : "JhonJairoAlvarez 3/5/2017 21:20",
+		"mooseFinderArtefactDemandedIn:" : "ahurtado 11/30/2016 15:13",
+		"mooseFinderArtefactWasteIn:" : "ahurtado 11/30/2016 15:06",
+		"mooseFinderArtefactWithoutRolesIn:" : "jjalvarezl 9/4/2017 18:26",
+		"viewDemandedWorkProductPatternOn:" : "jjalvarezl 9/4/2017 18:20",
+		"myModel" : "Julio Hurtado 6/12/2010 11:05",
+		"mooseFinderArtefactIndependentSubprojectsIn:" : "ahurtado 11/30/2016 15:10",
+		"viewArtifactBlueprintOn:" : "jjalvarezl 9/4/2017 18:20",
+		"viewArtifactWithoutRolesOn:" : "jjalvarezl 9/4/2017 18:25",
+		"myModel:" : "AlexandreBergel 2/22/2017 13:40",
+		"mooseFinderArtefactGuidanceIn:" : "ahurtado 11/30/2016 15:07",
+		"viewArtifactGuidanceBlueprint" : "AlexandreBergel 2/22/2017 13:27",
+		"viewDemandedWorkProductsPattern" : "ahurtado 11/30/2016 14:28",
+		"viewArtifactWastePattern" : "AlexandreBergel 2/22/2017 13:27",
+		"viewArtifactWastePatternOn:" : "jjalvarezl 9/4/2017 18:20"
+	},
+	"class" : { }
+}
