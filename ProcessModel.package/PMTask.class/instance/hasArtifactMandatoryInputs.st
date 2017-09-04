@@ -1,3 +1,0 @@
-testing
-hasArtifactMandatoryInputs
-	^ self artifactMandatoryInputs notEmpty

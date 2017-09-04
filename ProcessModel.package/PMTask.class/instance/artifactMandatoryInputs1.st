@@ -1,3 +1,0 @@
-accessing
-artifactMandatoryInputs1
-	^ artifactMandatoryInputs

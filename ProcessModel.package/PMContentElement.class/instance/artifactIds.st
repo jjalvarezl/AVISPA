@@ -1,3 +1,0 @@
-accessing
-artifactIds
-	^ artifactIds
