@@ -6,3 +6,8 @@ initialize
 	predecessors := OrderedCollection new.
 	containedTaskDescriptors := OrderedCollection new.
 	containedActivities := OrderedCollection new.
+	
+	"Metrics initializations"
+	self numberOfContainedArtifacts.
+	self numberOfContainedRoles.
+	self numberOfContainedTasks.

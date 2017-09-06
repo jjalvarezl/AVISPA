@@ -9,7 +9,7 @@ allContainedArtifacts
 				ifFalse: [ allContainedArtifacts add: pmArtifact ]
 		].
 	
-		pmTask artifactMandatoryInputs do: [ :pmArtifact |
+		pmTask artifactOutputs do: [ :pmArtifact |
 			(allContainedArtifacts includes: pmArtifact)
 				ifFalse: [ allContainedArtifacts add: pmArtifact ]
 		]
