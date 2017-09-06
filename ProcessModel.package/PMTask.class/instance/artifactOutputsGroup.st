@@ -1,9 +1,13 @@
 navigation
 artifactOutputsGroup
 	<navigation: 'Artifact outputs'>
-	^ self privateState 
+	| pmArtifactGroup |
+	pmArtifactGroup := PMArtifactGroup 
+		withAll: self artifactOutputs
+		withDescription: 'Artifact output from task ' , self mooseName.
+	pmArtifactGroup myModel: self myModel.
+	"^ self privateState 
 		attributeAt: #artifactOutputsGroup
 		ifAbsentPut:
-			[MooseGroup
-				withAll: self artifactOutputs
-				withDescription: 'Artifact output from task ' , self mooseName]
+			[pmArtifactGroup]"
+		^pmArtifactGroup

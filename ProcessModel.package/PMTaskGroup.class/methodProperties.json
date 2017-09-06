@@ -2,7 +2,7 @@
 	"instance" : {
 		"viewMethodContentVsProccess" : "ahurtado 11/30/2016 12:49",
 		"avispaDescription" : "AlexandreBergel 10/4/2012 18:03",
-		"viewTaskAndActivityBlueprint" : "JhonJairoAlvarez 8/29/2017 16:04",
+		"viewTaskAndActivityBlueprint" : "jjalvarezl 9/5/2017 22:44",
 		"taskBlueprintLegend" : "AlexandreBergel 10/4/2012 18:10",
 		"legendButtonOn:" : "AlexandreBergel 10/4/2012 18:16",
 		"viewIndependentSubprojectPatternOn:" : "jjalvarezl 9/4/2017 18:23",
@@ -15,7 +15,7 @@
 		"viewTaskRoles" : "ahurtado 11/30/2016 12:56",
 		"viewTaskBlueprintClusterOn:" : "jjalvarezl 9/4/2017 18:23",
 		"viewTaskVariabilityBlueprint" : "ahurtado 11/30/2016 12:57",
-		"viewTaskWarningBlueprintOn:" : "jjalvarezl 9/4/2017 18:23",
+		"viewTaskWarningBlueprintOn:" : "jjalvarezl 9/5/2017 20:39",
 		"mooseFinderTaskBlueprintIn:" : "ahurtado 11/28/2016 19:57",
 		"viewTaskVariabilityBlueprintOn:" : "jjalvarezl 9/4/2017 18:23",
 		"viewTaskBlueprintCluster" : "ahurtado 11/30/2016 12:37",
@@ -34,7 +34,7 @@
 		"viewTaskGuidelinesPattern" : "juliohurtado 1/12/2017 20:49",
 		"viewTaskGuidelinesOn:" : "ahurtado 11/27/2016 03:16",
 		"myModel" : "Julio Hurtado 6/12/2010 10:49",
-		"viewTaskWarningBlueprint" : "ahurtado 11/30/2016 12:58",
+		"viewTaskWarningBlueprint" : "jjalvarezl 9/5/2017 22:42",
 		"mooseFinderTaskGuidelinesPatternIn:" : "ahurtado 11/30/2016 13:16",
 		"viewTaskBlueprintOn:" : "jjalvarezl 9/4/2017 18:23",
 		"myModel:" : "Julio Hurtado 6/12/2010 10:49"
