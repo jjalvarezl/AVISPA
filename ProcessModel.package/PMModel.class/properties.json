@@ -6,6 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
+		"deliveryProcesses",
+		"capabilityPatterns",
 		"tasks",
 		"guidelines",
 		"concepts",

@@ -14,7 +14,7 @@ viewTaskWarningBlueprintOn: mondrian
 	"coll2 := coll select: [:each| each use = true]."
 	coll2 := coll select: [:each| true].
 	view nodes: coll2.
-	view shape line."color: Color gray trans; withShorterDistanceAttachPoint."
+	view shape arrowedLine."color: Color gray trans; withShorterDistanceAttachPoint."
 	view edges source: coll2 connectFrom: #yourself toAll: #followingTasks.
 	view layout tree.
 	"view root interaction item: 'inspect group' action: [:v | coll2 inspect]"
@@ -24,5 +24,5 @@ viewTaskWarningBlueprintOn: mondrian
 	legend addText: 'Complexity Task Pattern'.
 	legend addRectanglePolymetricWidth: '#ProducedArtefacts' height: '#ComsumedArtefacts' box: 'Task'.
 	legend addColor: Color red text:'Tasks producing many artefacts'.
-	legend addLineColor: Color red text:'Replace'.
+	"legend addLineColor: Color red text:'Replace'."
 	legend build

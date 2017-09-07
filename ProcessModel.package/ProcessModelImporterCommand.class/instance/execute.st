@@ -1,4 +1,4 @@
-as yet unclassified
+hooks
 execute
 	| model modelVar fileStream fileStreamVar|
 	self info.
@@ -9,18 +9,17 @@ execute
 		
 	fileStream ifNil: [ ^ self ].
 	
-	fileStreamVar  := UITheme builder
-		fileOpen: 'Import EPF XML model' 
-		extensions: #('xml').
-		
 	model := ProcessModelImporter new importFromStream: fileStream.
+	modelVar := model clone.
+	
+	"Realizando el modelo con AVISPA"
 	model resolveReferences: false.
 	model initializeMetrics.
 	model name: fileStream localName,'-AVISPA'.
 	model install.
 	self addModel: model.
 	
-	modelVar := ProcessModelImporter new importFromStream: fileStreamVar.
+	"Realizando el modelo con vAVISPA"
 	modelVar resolveReferences: true.
 	modelVar resolucionVariability.
 	modelVar initializeMetrics.

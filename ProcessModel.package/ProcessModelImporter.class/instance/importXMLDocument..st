@@ -3,14 +3,23 @@ importXMLDocument: document
 	"
 	self new importXMLDocument: (Smalltalk at: #MyDocument)
 	"
-	| tasks pmTasks guidelines concepts pmConcepts pmModel pmGuidelines contentElements pmContentElements roles pmRoles artifacts pmArtifacts templates pmTemplates activities pmActivities breakdownElements taskDescriptors pmTaskDescriptors pmBreakdownElements deliverables pmDeliverables taskinuse entities tempArtifacts tempInputArtifacts tempOutputArtifacts tempTasks tempRoles tempPMRoles tempPMTasks |
+	| processes deliveryProcesses pmDeliveryProcesses capabilityPatterns pmCapabilityPatterns tasks pmTasks guidelines concepts pmConcepts pmModel pmGuidelines contentElements pmContentElements roles pmRoles artifacts pmArtifacts templates pmTemplates activities pmActivities breakdownElements taskDescriptors pmTaskDescriptors pmBreakdownElements deliverables pmDeliverables taskinuse entities tempArtifacts tempInputArtifacts tempOutputArtifacts tempTasks tempRoles tempPMRoles tempPMTasks |
+	
+	"processes := (document // #Process) select: [ :el | (el attributeAt: #xsi:type) = 'uma:DeliveryProcess' ]."
+	processes := document // #Process.
 	contentElements := document // #ContentElement.
 	breakdownElements := document // #BreakdownElement.
+	
+	deliveryProcesses := processes select: [ :el | (el attributeAt: #xsi:type) = 'uma:DeliveryProcess' ]..
+	pmDeliveryProcesses := deliveryProcesses collect: [:xmlElement | 
+									PMDeliveryProcess fromXMLDescription: xmlElement].
+	capabilityPatterns := processes select: [ :el | (el attributeAt: #xsi:type) = 'uma:CapabilityPattern' ]..
+	pmCapabilityPatterns := capabilityPatterns collect: [:xmlElement | 
+									PMCapabilityPattern fromXMLDescription: xmlElement].
 	pmContentElements := contentElements collect: [:xmlElement | 
 									PMContentElement fromXMLDescription: xmlElement].
    pmBreakdownElements := breakdownElements collect: [:xmlElement | 
-									PMBreakdownElement fromXMLDescription: xmlElement].
-								
+									PMBreakdownElement fromXMLDescription: xmlElement].								
 
 	tasks := contentElements select: [:el | (el attributeAt: #xsi:type) = 'uma:Task' ].
 	pmTasks := tasks collect: [:xmlElement | PMTask fromXMLDescription: xmlElement].
@@ -212,6 +221,8 @@ importXMLDocument: document
 	"FIN DE IMPLEMENTACIONES DE SUPERACTIVIDADES Y PREDECESORES ENTRE TAREAS Y PATRONES DE CAPACIDAD"
 	
 	pmModel := PMModel new
+						deliveryProcesses: pmDeliveryProcesses;
+						capabilityPatterns: pmCapabilityPatterns;
 						tasks: pmTasks; 
 						concepts: pmConcepts; 
 						guidelines: pmGuidelines;
@@ -226,13 +237,15 @@ importXMLDocument: document
 						entities: entities.
 	
 	"Reasignando pmModel a cada uno de sus elementos para pasar las métricas de todo el modelo a los planos generados por cada actividad."
-	pmModel tasks: (pmModel tasks collect: [ :pmTask | pmTask myModel: pmModel clone ]).
+	pmModel tasks: (pmModel tasks collect: [ :pmTask | pmTask myModel: pmModel ]).
 	pmModel concepts: (pmModel concepts collect: [ :pmConcept | pmConcept myModel: pmModel ]).
 	pmModel guidelines: (pmModel guidelines collect: [ :pmGuideline | pmGuideline myModel: pmModel ]).
 	pmModel roles: (pmModel roles collect: [ :pmRole | pmRole myModel: pmModel ]).
 	pmModel artifacts: (pmModel artifacts collect: [ :pmArtifact | pmArtifact myModel: pmModel ]).
 	pmModel taskDescriptors: (pmModel taskDescriptors collect: [ :pmTaskDescriptor | pmTaskDescriptor myModel: pmModel ]).
 	pmModel activities: (pmModel activities collect: [ :pmActivity | pmActivity myModel: pmModel ]).
+	pmModel deliveryProcesses: (pmModel deliveryProcesses collect: [ :pmDeliveryProcess | pmDeliveryProcess myModel: pmModel ]).
+	pmModel capabilityPatterns: (pmModel capabilityPatterns collect: [ :pmCapabilityPattern | pmCapabilityPattern myModel: pmModel ]).
 	pmModel.
 	
 	"pmModel resolveReferences.
