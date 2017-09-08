@@ -1,6 +1,9 @@
 {
-	"instance" : { },
+	"instance" : {
+		"containedActivities:" : "jjalvarezl 9/8/2017 00:22",
+		"containedActivities" : "jjalvarezl 9/8/2017 00:22"
+	},
 	"class" : {
-		"initialize:" : "jjalvarezl 9/7/2017 19:56"
+		"fromXMLDescription:" : "jjalvarezl 9/7/2017 22:52"
 	}
 }

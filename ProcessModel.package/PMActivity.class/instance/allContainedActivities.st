@@ -1,3 +1,3 @@
 accessing
-containedActivities
+allContainedActivities
 	^ containedActivities ifNil: [ OrderedCollection new ].

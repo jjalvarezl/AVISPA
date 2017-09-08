@@ -1,6 +1,6 @@
 metrics
 numberOfContainedArtifacts
-	<MSEProperty: #NCA type: #Number>
-	<property: #NCA longName: 'Number of all contained roles' description:
-			'The number of all contained roles from the present activity'>
+	<MSEProperty: #NArt type: #Number>
+	<property: #NArt longName: 'Number of all contained artifacts' description:
+			'Number of all contained artifacts'>
 	^ self allContainedArtifacts size

@@ -1,13 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "PMModelObject",
+	"super" : "MooseGroup",
 	"category" : "ProcessModel-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"containedActivities"
+		"myModel"
 	],
-	"name" : "PMDeliveryProcess",
+	"name" : "PMCapabilityPatternGroup",
 	"type" : "normal"
 }

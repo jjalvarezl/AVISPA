@@ -5,21 +5,21 @@ importXMLDocument: document
 	"
 	| processes deliveryProcesses pmDeliveryProcesses capabilityPatterns pmCapabilityPatterns tasks pmTasks guidelines concepts pmConcepts pmModel pmGuidelines contentElements pmContentElements roles pmRoles artifacts pmArtifacts templates pmTemplates activities pmActivities breakdownElements taskDescriptors pmTaskDescriptors pmBreakdownElements deliverables pmDeliverables taskinuse entities tempArtifacts tempInputArtifacts tempOutputArtifacts tempTasks tempRoles tempPMRoles tempPMTasks |
 	
-	"processes := (document // #Process) select: [ :el | (el attributeAt: #xsi:type) = 'uma:DeliveryProcess' ]."
 	processes := document // #Process.
 	contentElements := document // #ContentElement.
 	breakdownElements := document // #BreakdownElement.
 	
-	deliveryProcesses := processes select: [ :el | (el attributeAt: #xsi:type) = 'uma:DeliveryProcess' ]..
+	deliveryProcesses := processes select: [ :el | (el attributeAt: #xsi:type) = 'uma:DeliveryProcess' ].
 	pmDeliveryProcesses := deliveryProcesses collect: [:xmlElement | 
 									PMDeliveryProcess fromXMLDescription: xmlElement].
-	capabilityPatterns := processes select: [ :el | (el attributeAt: #xsi:type) = 'uma:CapabilityPattern' ]..
+	"Los capability patterns no son de utilidad para los objetivos de avispa, sin embargo se dejan importados y almacenados en el pmModel sin mostrarlo en el moose panel por si se necesitan mas adelante"
+	capabilityPatterns := processes select: [ :el | (el attributeAt: #xsi:type) = 'uma:CapabilityPattern' ].
 	pmCapabilityPatterns := capabilityPatterns collect: [:xmlElement | 
 									PMCapabilityPattern fromXMLDescription: xmlElement].
 	pmContentElements := contentElements collect: [:xmlElement | 
 									PMContentElement fromXMLDescription: xmlElement].
    pmBreakdownElements := breakdownElements collect: [:xmlElement | 
-									PMBreakdownElement fromXMLDescription: xmlElement].								
+									PMBreakdownElement fromXMLDescription: xmlElement].	
 
 	tasks := contentElements select: [:el | (el attributeAt: #xsi:type) = 'uma:Task' ].
 	pmTasks := tasks collect: [:xmlElement | PMTask fromXMLDescription: xmlElement].
@@ -183,8 +183,9 @@ importXMLDocument: document
 	].
 
 	
-	"Super-actividades de tareas a actividades:"
+	
 	activities do:[:activity1 |
+		"Super-actividades de tareas a actividades:"
 		activities do: [:activity2 |
       	    (((activity1 / #SuperActivity) first ifNotNil: [:output | output nodes first]) asString = (activity2 attributeAt: #variabilityBasedOnElement) asString)
 			 ifTrue:[
@@ -215,7 +216,19 @@ importXMLDocument: document
 	                    ]
                ]
 			 ]
-		]
+		].
+	  "Super-actividades de actividades a delivery process:"
+	   pmDeliveryProcesses do: [ :pmDeliveryProcess |
+			(((activity1 / #SuperActivity) first ifNotNil: [:output | output nodes first]) asString = (pmDeliveryProcess id) asString)
+			ifTrue: [ pmActivities do: [ :pmActivity1 |
+	                (((activity1 attributeAt: #id) asString) = pmActivity1 id asString)
+                       ifTrue: [
+									pmActivity1 addSuperActivity: pmDeliveryProcess.
+									pmDeliveryProcess addContainedActivity: pmActivity1.
+	                    ]
+               ] 
+         ].
+		].
 	].
 
 	"FIN DE IMPLEMENTACIONES DE SUPERACTIVIDADES Y PREDECESORES ENTRE TAREAS Y PATRONES DE CAPACIDAD"

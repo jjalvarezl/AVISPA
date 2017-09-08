@@ -1,5 +1,5 @@
 vizualization
-viewActivitiesCouplingFactorBlueprintOn: view
+viewActivitiesCouplingFactorByContainedActivitiesBlueprintOn: view
 	| b legend  |
 	b := RTMondrian new.
 	b view: view.
@@ -9,11 +9,11 @@ viewActivitiesCouplingFactorBlueprintOn: view
 	b shape rectangle
 		borderWidth: 1;
 		borderColor: Color black;
-		fillColor:   [ :pmActivity | pmActivity taskCouplingFactor > 3 ifTrue: [Color green] ifFalse: [Color white]] ; 
+		"fillColor:   [ :pmActivity | pmActivity taskCouplingFactor > 3 ifTrue: [Color green] ifFalse: [Color white]] ; "
 		"borderColor: [:each2| each2 use = false ifTrue: [Color red]ifFalse: [Color green]];"
 			"linearFillColor: #numberOfConcepts within:coll ;"
-			width: [ :pmActivity | pmActivity numberOfInputDependencesOfArtifacts * 10 ];
-			height: [ :pmActivity | pmActivity numberOfOutputDependencesOfArtifacts * 10 ].
+			width: [ :pmActivity | pmActivity numberOfPrecedenceDependencesBetweenActivities * 10 ];
+			height: [ :pmActivity | pmActivity numberOfDependencesOfArtifacts * 5 ].
 	"view shape rectangle
 		borderWidth: 1;
 		linearFillColor: #numberOfRoles within: inuse ;
@@ -37,7 +37,7 @@ viewActivitiesCouplingFactorBlueprintOn: view
 	"view shape arrowedLine color: Color gray trans; withShorterDistanceAttachPoint."
 	"view edges source: coll connectFrom: #yourself toAll: #followingTasks."
 	b nodes: self.
-	
+	b normalizer normalizeColor: #activityCouplingFactor using: (Array with: Color black with: Color green) using: [ :vv | (vv + 1) ln * 5 ].
 	b shape arrowedLine color: Color blue.
 	b edges connectFromAll: #predecessors.
 	b layout tree.
@@ -52,7 +52,7 @@ viewActivitiesCouplingFactorBlueprintOn: view
 	
 	legend := RTLegendBuilder new.
 	legend view: b view.
-	legend addText: '*****Coupling tasks per activity*****'.
+	legend addText: '*****Coupling between activities per activity*****'.
 	legend addText: 'Each big box is an artifact'.
 	"legend addColor: Color red text: 'Tasks not used Task in use'.
 	legend addColor: Color green text: 'Tasks in use and Tasks'.
@@ -62,7 +62,7 @@ viewActivitiesCouplingFactorBlueprintOn: view
 	legend addLineColor: Color blue text:'Predecessors'.
 	legend addLineColor: Color red text:'Super Activity'.
 	legend addText: ''.
-	legend addRectanglePolymetricWidth: '#inputArtifacts' height: '#outputArtifacts' box: 'Activity'.
+	legend addRectanglePolymetricWidth: '#precedenceDependencesBetweenActivities' height: '#dependencesOfArtifactss' box: 'Activity'.
+	legend addColorFadingFrom: Color black to: Color green text: 'activity coupling factor by contained activities by each activity (box)'.
 	
-	legend addText: 'If activity box is green colored, then task is too coupled, otherwise not'.
 	legend build
