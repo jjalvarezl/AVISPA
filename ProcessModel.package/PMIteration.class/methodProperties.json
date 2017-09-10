@@ -1,0 +1,15 @@
+{
+	"instance" : {
+		"addSuperActivity:" : "jjalvarezl 9/9/2017 23:44",
+		"addContainedActivity:" : "jjalvarezl 9/9/2017 23:44",
+		"initialize" : "jjalvarezl 9/10/2017 00:10",
+		"superActivities" : "jjalvarezl 9/9/2017 23:41",
+		"containedActivities:" : "jjalvarezl 9/9/2017 23:41",
+		"containedActivities" : "jjalvarezl 9/9/2017 23:41",
+		"containedActivitiesGroup" : "jjalvarezl 9/10/2017 00:15",
+		"superActivities:" : "jjalvarezl 9/9/2017 23:41"
+	},
+	"class" : {
+		"fromXMLDescription:" : "jjalvarezl 9/9/2017 23:48"
+	}
+}

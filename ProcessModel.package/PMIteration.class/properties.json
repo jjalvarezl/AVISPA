@@ -6,9 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"containedActivities",
-		"containedIterations"
+		"superActivities",
+		"containedActivities"
 	],
-	"name" : "PMDeliveryProcess",
+	"name" : "PMIteration",
 	"type" : "normal"
 }

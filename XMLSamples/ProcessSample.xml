@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uma:MethodLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uma="http://www.eclipse.org/epf/uma/1.0.6" name="NewProcessSample" briefDescription="" id="_fp0VAZTYEeerEY2cIj65GQ" orderingGuide="" presentationName="" suppressed="false" authors="" changeDescription="" version="" tool="epf=1.5.0">
+  <MethodElementProperty name="library_synFree" value="true"/>
+  <MethodPlugin name="ProcessSample1" briefDescription="" id="_i5sKUJTYEeerEY2cIj65GQ" orderingGuide="" presentationName="" suppressed="false" authors="" changeDescription="" version="" supporting="false" userChangeable="true">
+    <MethodElementProperty name="plugin_synFree" value="true"/>
+    <MethodPackage xsi:type="uma:ContentCategoryPackage" name="ContentCategories" id="_1fOv8JXGEeea0Z7NGJurKQ">
+      <ContentCategory xsi:type="uma:CustomCategory" name="processsample1customcategory" briefDescription="" id="_fZGAEJWWEeeYo5XPt1jj6A" orderingGuide="" presentationName="ProcessSample1CustomCategory" suppressed="false" isAbstract="false" variabilityType="na">
+        <MethodElementProperty name="me_edited" value="true"/>
+        <CategorizedElement>_tbKywZTdEeerEY2cIj65GQ</CategorizedElement>
+      </ContentCategory>
+    </MethodPackage>
+    <MethodPackage xsi:type="uma:ContentPackage" name="rolesprocesssample1" briefDescription="" id="_ycwdUJTdEeerEY2cIj65GQ" orderingGuide="" presentationName="RolesProcessSample1" suppressed="false" global="false">
+      <MethodElementProperty name="pkg_loadCheck" value="true"/>
+      <MethodElementProperty name="me_edited" value="true"/>
+      <ContentElement xsi:type="uma:Role" name="role1processsample1" briefDescription="" id="_9SzZ0JTdEeerEY2cIj65GQ" orderingGuide="" presentationName="Role1ProcessSample1" suppressed="false" isAbstract="false" variabilityType="na">
+        <MethodElementProperty name="me_edited" value="true"/>
+      </ContentElement>
+      <ContentElement xsi:type="uma:Role" name="role2processsample1" briefDescription="" id="_KoZh8JTeEeerEY2cIj65GQ" orderingGuide="" presentationName="Role2ProcessSample1" suppressed="false" isAbstract="false" variabilityType="na">
+        <MethodElementProperty name="me_edited" value="true"/>
+      </ContentElement>
+    </MethodPackage>
+    <MethodPackage xsi:type="uma:ContentPackage" name="tasksprocesssample1" briefDescription="" id="_1uALoJTdEeerEY2cIj65GQ" orderingGuide="" presentationName="TasksProcessSample1" suppressed="false" global="false">
+      <MethodElementProperty name="pkg_loadCheck" value="true"/>
+      <MethodElementProperty name="me_edited" value="true"/>
+      <ContentElement xsi:type="uma:Task" name="task1processsample1" briefDescription="" id="__LKpoJTdEeerEY2cIj65GQ" orderingGuide="" presentationName="Task1ProcessSample1" suppressed="false" isAbstract="false" variabilityType="na">
+        <MethodElementProperty name="me_edited" value="true"/>
+        <PerformedBy>_9SzZ0JTdEeerEY2cIj65GQ</PerformedBy>
+        <MandatoryInput>_6Q_1sJTdEeerEY2cIj65GQ</MandatoryInput>
+        <Output>_H6Ik4JTeEeerEY2cIj65GQ</Output>
+      </ContentElement>
+      <ContentElement xsi:type="uma:Task" name="task2processsample1" briefDescription="" id="_bTtosJTeEeerEY2cIj65GQ" orderingGuide="" presentationName="Task2ProcessSample1" suppressed="false" isAbstract="false" variabilityType="na">
+        <MethodElementProperty name="me_edited" value="true"/>
+        <PerformedBy>_9SzZ0JTdEeerEY2cIj65GQ</PerformedBy>
+        <MandatoryInput>_H6Ik4JTeEeerEY2cIj65GQ</MandatoryInput>
+        <Output>_H6Ik4JTeEeerEY2cIj65GQ</Output>
+      </ContentElement>
+    </MethodPackage>
+    <MethodPackage xsi:type="uma:ContentPackage" name="artifactsprocesssample1" briefDescription="" id="_3mO4kJTdEeerEY2cIj65GQ" orderingGuide="" presentationName="ArtifactsProcessSample1" suppressed="false" global="false">
+      <MethodElementProperty name="pkg_loadCheck" value="true"/>
+      <MethodElementProperty name="me_edited" value="true"/>
+      <ContentElement xsi:type="uma:Artifact" name="artifact1processsample1" briefDescription="" id="_6Q_1sJTdEeerEY2cIj65GQ" orderingGuide="" presentationName="Artifact1ProcessSample1" suppressed="false" isAbstract="false" variabilityType="na">
+        <MethodElementProperty name="me_edited" value="true"/>
+      </ContentElement>
+      <ContentElement xsi:type="uma:Artifact" name="artifact2processsample1" briefDescription="" id="_H6Ik4JTeEeerEY2cIj65GQ" orderingGuide="" presentationName="Artifact2ProcessSample1" suppressed="false" isAbstract="false" variabilityType="na">
+        <MethodElementProperty name="me_edited" value="true"/>
+      </ContentElement>
+    </MethodPackage>
+    <MethodPackage xsi:type="uma:ProcessComponent" name="IterationProcessSample1" briefDescription="" id="_G_loMJTeEeerEY2cIj65GQ" orderingGuide="" presentationName="" suppressed="false" global="false" authors="" changeDescription="" version="">
+      <MethodElementProperty name="pkg_loadCheck" value="true"/>
+      <MethodElementProperty name="me_edited" value="true"/>
+      <Process xsi:type="uma:CapabilityPattern" name="IterationProcessSample1" briefDescription="" id="_G_loMZTeEeerEY2cIj65GQ" orderingGuide="" presentationName="IterationProcessSample1" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="true" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" variabilityType="na">
+        <Presentation xsi:type="uma:ProcessDescription" name="IterationProcessSample1,_G_loMZTeEeerEY2cIj65GQ" briefDescription="" id="-Y3aboBPwRj3I2fN_h17Kow" orderingGuide="" presentationName="" suppressed="false" authors="" changeDescription="" version="" externalId="" usageGuidance="">
+          <MainDescription></MainDescription>
+          <KeyConsiderations></KeyConsiderations>
+          <Alternatives></Alternatives>
+          <HowToStaff></HowToStaff>
+          <Purpose></Purpose>
+          <Scope></Scope>
+          <UsageNotes></UsageNotes>
+        </Presentation>
+        <BreakdownElement xsi:type="uma:Activity" name="Activity1ProcessSample1" briefDescription="" id="_Y6NlQZTfEeerEY2cIj65GQ" orderingGuide="" presentationName="Activity1ProcessSample1" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="true" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" variabilityBasedOnElement="_jQuikZTeEeerEY2cIj65GQ" variabilityType="extends">
+          <SuperActivity>_G_loMZTeEeerEY2cIj65GQ</SuperActivity>
+        </BreakdownElement>
+        <BreakdownElement xsi:type="uma:Activity" name="Activity2ProcessSample1" briefDescription="" id="_Y6NlQ5TfEeerEY2cIj65GQ" orderingGuide="" presentationName="Activity2ProcessSample1" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="true" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" variabilityBasedOnElement="_km4dMZTeEeerEY2cIj65GQ" variabilityType="extends">
+          <SuperActivity>_G_loMZTeEeerEY2cIj65GQ</SuperActivity>
+        </BreakdownElement>
+      </Process>
+    </MethodPackage>
+    <MethodPackage xsi:type="uma:ProcessComponent" name="Activity1ProcessSample1" briefDescription="" id="_jQuikJTeEeerEY2cIj65GQ" orderingGuide="" presentationName="" suppressed="false" global="false" authors="" changeDescription="" version="">
+      <MethodElementProperty name="pkg_loadCheck" value="true"/>
+      <MethodElementProperty name="me_edited" value="true"/>
+      <Process xsi:type="uma:CapabilityPattern" name="Activity1ProcessSample1" briefDescription="" id="_jQuikZTeEeerEY2cIj65GQ" orderingGuide="" presentationName="Activity1ProcessSample1" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="true" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" variabilityType="na" diagramURI="ProcessSample1/capabilitypatterns/Activity1ProcessSample1/diagram.xmi">
+        <Presentation xsi:type="uma:ProcessDescription" name="Activity1ProcessSample1,_jQuikZTeEeerEY2cIj65GQ" briefDescription="" id="-dmFh-8jefUnfzhsAyFc5sA" orderingGuide="" presentationName="" suppressed="false" authors="" changeDescription="" version="" externalId="" usageGuidance="">
+          <MainDescription></MainDescription>
+          <KeyConsiderations></KeyConsiderations>
+          <Alternatives></Alternatives>
+          <HowToStaff></HowToStaff>
+          <Purpose></Purpose>
+          <Scope></Scope>
+          <UsageNotes></UsageNotes>
+        </Presentation>
+        <BreakdownElement xsi:type="uma:TaskDescriptor" name="task1processsample1" briefDescription="" id="_zGBAQJTeEeerEY2cIj65GQ" orderingGuide="" presentationName="Task1ProcessSample1" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="false" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" isSynchronizedWithSource="true">
+          <MethodElementProperty name="me_references" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;me_references udtList=&quot;&quot;/>"/>
+          <SuperActivity>_jQuikZTeEeerEY2cIj65GQ</SuperActivity>
+          <Task>__LKpoJTdEeerEY2cIj65GQ</Task>
+          <MandatoryInput>_3dLNwZTeEeerEY2cIj65GQ</MandatoryInput>
+          <Output>_3dLNxJTeEeerEY2cIj65GQ</Output>
+          <PerformedPrimarilyBy>_3dKmsZTeEeerEY2cIj65GQ</PerformedPrimarilyBy>
+        </BreakdownElement>
+        <BreakdownElement xsi:type="uma:RoleDescriptor" name="role1processsample1" briefDescription="" id="_3dKmsZTeEeerEY2cIj65GQ" orderingGuide="" presentationName="Role1ProcessSample1" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="false" prefix="" isSynchronizedWithSource="true">
+          <MethodElementProperty name="descriptor_createdByReference" value="true"/>
+          <MethodElementProperty name="me_references" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;me_references udtList=&quot;&quot;/>"/>
+          <SuperActivity>_jQuikZTeEeerEY2cIj65GQ</SuperActivity>
+          <Role>_9SzZ0JTdEeerEY2cIj65GQ</Role>
+        </BreakdownElement>
+        <BreakdownElement xsi:type="uma:WorkProductDescriptor" name="artifact1processsample1" briefDescription="" id="_3dLNwZTeEeerEY2cIj65GQ" orderingGuide="" presentationName="Artifact1ProcessSample1" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="false" prefix="" isSynchronizedWithSource="true" activityEntryState="" activityExitState="">
+          <MethodElementProperty name="descriptor_createdByReference" value="true"/>
+          <MethodElementProperty name="me_references" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;me_references udtList=&quot;&quot;/>"/>
+          <SuperActivity>_jQuikZTeEeerEY2cIj65GQ</SuperActivity>
+          <WorkProduct>_6Q_1sJTdEeerEY2cIj65GQ</WorkProduct>
+        </BreakdownElement>
+        <BreakdownElement xsi:type="uma:WorkProductDescriptor" name="artifact2processsample1" briefDescription="" id="_3dLNxJTeEeerEY2cIj65GQ" orderingGuide="" presentationName="Artifact2ProcessSample1" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="false" prefix="" isSynchronizedWithSource="true" activityEntryState="" activityExitState="">
+          <MethodElementProperty name="descriptor_createdByReference" value="true"/>
+          <MethodElementProperty name="me_references" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;me_references udtList=&quot;&quot;/>"/>
+          <SuperActivity>_jQuikZTeEeerEY2cIj65GQ</SuperActivity>
+          <WorkProduct>_H6Ik4JTeEeerEY2cIj65GQ</WorkProduct>
+        </BreakdownElement>
+        <BreakdownElement xsi:type="uma:TaskDescriptor" name="task2processsample1" briefDescription="" id="_48N-oJTeEeerEY2cIj65GQ" orderingGuide="" presentationName="Task2ProcessSample1" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="false" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" isSynchronizedWithSource="true">
+          <MethodElementProperty name="me_references" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;me_references udtList=&quot;&quot;/>"/>
+          <SuperActivity>_jQuikZTeEeerEY2cIj65GQ</SuperActivity>
+          <Predecessor id="_CX3ZsZTfEeerEY2cIj65GQ" linkType="finishToStart">_zGBAQJTeEeerEY2cIj65GQ</Predecessor>
+          <Task>_bTtosJTeEeerEY2cIj65GQ</Task>
+          <MandatoryInput>_3dLNxJTeEeerEY2cIj65GQ</MandatoryInput>
+          <Output>_3dLNxJTeEeerEY2cIj65GQ</Output>
+          <PerformedPrimarilyBy>_3dKmsZTeEeerEY2cIj65GQ</PerformedPrimarilyBy>
+        </BreakdownElement>
+      </Process>
+    </MethodPackage>
+    <MethodPackage xsi:type="uma:ProcessComponent" name="Activity2ProcessSample1" briefDescription="" id="_km4dMJTeEeerEY2cIj65GQ" orderingGuide="" presentationName="" suppressed="false" global="false" authors="" changeDescription="" version="">
+      <MethodElementProperty name="pkg_loadCheck" value="true"/>
+      <MethodElementProperty name="me_edited" value="true"/>
+      <Process xsi:type="uma:CapabilityPattern" name="Activity2ProcessSample1" briefDescription="" id="_km4dMZTeEeerEY2cIj65GQ" orderingGuide="" presentationName="Activity2ProcessSample1" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="true" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" variabilityType="na" diagramURI="ProcessSample1/capabilitypatterns/Activity2ProcessSample1/diagram.xmi">
+        <Presentation xsi:type="uma:ProcessDescription" name="Activity1ProcessSample1,_jQuikZTeEeerEY2cIj65GQ" briefDescription="" id="-kgCimIu8Ngm2h4u2E_TgWw" orderingGuide="" presentationName="" suppressed="false" authors="" changeDescription="" version="" externalId="" usageGuidance="">
+          <MainDescription></MainDescription>
+          <KeyConsiderations></KeyConsiderations>
+          <Alternatives></Alternatives>
+          <HowToStaff></HowToStaff>
+          <Purpose></Purpose>
+          <Scope></Scope>
+          <UsageNotes></UsageNotes>
+        </Presentation>
+        <BreakdownElement xsi:type="uma:TaskDescriptor" name="task1processsample1" briefDescription="" id="_LWPC4JTfEeerEY2cIj65GQ" orderingGuide="" presentationName="Task1ProcessSample1" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="false" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" isSynchronizedWithSource="true">
+          <MethodElementProperty name="me_references" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;me_references udtList=&quot;&quot;/>"/>
+          <SuperActivity>_km4dMZTeEeerEY2cIj65GQ</SuperActivity>
+          <Predecessor id="_OyWkcJTfEeerEY2cIj65GQ" linkType="finishToStart">_LWPp8JTfEeerEY2cIj65GQ</Predecessor>
+          <Task>__LKpoJTdEeerEY2cIj65GQ</Task>
+          <MandatoryInput>_LWPp85TfEeerEY2cIj65GQ</MandatoryInput>
+          <Output>_LWQRAZTfEeerEY2cIj65GQ</Output>
+          <PerformedPrimarilyBy>_LWPp8ZTfEeerEY2cIj65GQ</PerformedPrimarilyBy>
+        </BreakdownElement>
+        <BreakdownElement xsi:type="uma:TaskDescriptor" name="task2processsample1" briefDescription="" id="_LWPp8JTfEeerEY2cIj65GQ" orderingGuide="" presentationName="Task2ProcessSample1" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="false" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" isSynchronizedWithSource="true">
+          <MethodElementProperty name="me_references" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;me_references udtList=&quot;&quot;/>"/>
+          <SuperActivity>_km4dMZTeEeerEY2cIj65GQ</SuperActivity>
+          <Task>_bTtosJTeEeerEY2cIj65GQ</Task>
+          <MandatoryInput>_LWQRAZTfEeerEY2cIj65GQ</MandatoryInput>
+          <Output>_LWQRAZTfEeerEY2cIj65GQ</Output>
+          <PerformedPrimarilyBy>_LWPp8ZTfEeerEY2cIj65GQ</PerformedPrimarilyBy>
+        </BreakdownElement>
+        <BreakdownElement xsi:type="uma:RoleDescriptor" name="role1processsample1" briefDescription="" id="_LWPp8ZTfEeerEY2cIj65GQ" orderingGuide="" presentationName="Role1ProcessSample1" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="false" prefix="" isSynchronizedWithSource="true">
+          <MethodElementProperty name="descriptor_createdByReference" value="true"/>
+          <MethodElementProperty name="me_references" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;me_references udtList=&quot;&quot;/>"/>
+          <SuperActivity>_km4dMZTeEeerEY2cIj65GQ</SuperActivity>
+          <Role>_9SzZ0JTdEeerEY2cIj65GQ</Role>
+        </BreakdownElement>
+        <BreakdownElement xsi:type="uma:WorkProductDescriptor" name="artifact1processsample1" briefDescription="" id="_LWPp85TfEeerEY2cIj65GQ" orderingGuide="" presentationName="Artifact1ProcessSample1" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="false" prefix="" isSynchronizedWithSource="true" activityEntryState="" activityExitState="">
+          <MethodElementProperty name="descriptor_createdByReference" value="true"/>
+          <MethodElementProperty name="me_references" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;me_references udtList=&quot;&quot;/>"/>
+          <SuperActivity>_km4dMZTeEeerEY2cIj65GQ</SuperActivity>
+          <WorkProduct>_6Q_1sJTdEeerEY2cIj65GQ</WorkProduct>
+        </BreakdownElement>
+        <BreakdownElement xsi:type="uma:WorkProductDescriptor" name="artifact2processsample1" briefDescription="" id="_LWQRAZTfEeerEY2cIj65GQ" orderingGuide="" presentationName="Artifact2ProcessSample1" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="false" prefix="" isSynchronizedWithSource="true" activityEntryState="" activityExitState="">
+          <MethodElementProperty name="descriptor_createdByReference" value="true"/>
+          <MethodElementProperty name="me_references" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;me_references udtList=&quot;&quot;/>"/>
+          <SuperActivity>_km4dMZTeEeerEY2cIj65GQ</SuperActivity>
+          <WorkProduct>_H6Ik4JTeEeerEY2cIj65GQ</WorkProduct>
+        </BreakdownElement>
+      </Process>
+    </MethodPackage>
+    <MethodPackage xsi:type="uma:ProcessComponent" name="ProcessSample1" briefDescription="" id="_tbKywJTdEeerEY2cIj65GQ" orderingGuide="" presentationName="" suppressed="false" global="false" authors="" changeDescription="" version="">
+      <MethodElementProperty name="pkg_loadCheck" value="true"/>
+      <MethodElementProperty name="me_edited" value="true"/>
+      <Process xsi:type="uma:DeliveryProcess" name="ProcessSample1" briefDescription="" id="_tbKywZTdEeerEY2cIj65GQ" orderingGuide="" presentationName="ProcessSample1" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="true" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" variabilityType="na">
+        <Presentation xsi:type="uma:DeliveryProcessDescription" name="ProcessSample1,_tbKywZTdEeerEY2cIj65GQ" briefDescription="" id="-0QCPCeOEKRWL939pdzO_7Q" orderingGuide="" presentationName="" suppressed="false" authors="" changeDescription="" version="" externalId="" usageGuidance="">
+          <MainDescription></MainDescription>
+          <KeyConsiderations></KeyConsiderations>
+          <Alternatives></Alternatives>
+          <HowToStaff></HowToStaff>
+          <Purpose></Purpose>
+          <Scope></Scope>
+          <UsageNotes></UsageNotes>
+          <Scale></Scale>
+          <ProjectCharacteristics></ProjectCharacteristics>
+          <RiskLevel></RiskLevel>
+          <EstimatingTechnique></EstimatingTechnique>
+          <ProjectMemberExpertise></ProjectMemberExpertise>
+          <TypeOfContract></TypeOfContract>
+        </Presentation>
+        <BreakdownElement xsi:type="uma:Iteration" name="IterationProcessSample1" briefDescription="" id="_GYWXEJWkEeeYo5XPt1jj6A" orderingGuide="" presentationName="IterationProcessSample1" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="true" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" variabilityBasedOnElement="_G_loMZTeEeerEY2cIj65GQ" variabilityType="extends">
+          <SuperActivity>_tbKywZTdEeerEY2cIj65GQ</SuperActivity>
+        </BreakdownElement>
+        <IncludesPattern>_G_loMZTeEeerEY2cIj65GQ</IncludesPattern>
+      </Process>
+    </MethodPackage>
+  </MethodPlugin>
+  <MethodPlugin name="ProcessSample2" briefDescription="" id="_oQiWYJTcEeerEY2cIj65GQ" orderingGuide="" presentationName="" suppressed="false" authors="" changeDescription="" version="" supporting="false" userChangeable="true">
+    <MethodElementProperty name="plugin_synFree" value="true"/>
+    <MethodPackage xsi:type="uma:ContentCategoryPackage" name="ContentCategories" id="_1fYg8JXGEeea0Z7NGJurKQ">
+      <ContentCategory xsi:type="uma:CustomCategory" name="processsample2customcategory" briefDescription="" id="_KUZo0JWXEeeYo5XPt1jj6A" orderingGuide="" presentationName="ProcessSample2CustomCategory" suppressed="false" isAbstract="false" variabilityType="na">
+        <MethodElementProperty name="me_edited" value="true"/>
+        <CategorizedElement>_vUCY4ZTdEeerEY2cIj65GQ</CategorizedElement>
+      </ContentCategory>
+    </MethodPackage>
+    <MethodPackage xsi:type="uma:ContentPackage" name="artifactsprocesssample2" briefDescription="" id="_31IbsJWXEeeYo5XPt1jj6A" orderingGuide="" presentationName="ArtifactsProcessSample2" suppressed="false" global="false">
+      <MethodElementProperty name="pkg_loadCheck" value="true"/>
+      <MethodElementProperty name="me_edited" value="true"/>
+      <ContentElement xsi:type="uma:Artifact" name="artifact1processsample2" briefDescription="" id="_nwyY4JWYEeeYo5XPt1jj6A" orderingGuide="" presentationName="Artifact1ProcessSample2" suppressed="false" isAbstract="false" variabilityType="na">
+        <MethodElementProperty name="me_edited" value="true"/>
+      </ContentElement>
+      <ContentElement xsi:type="uma:Artifact" name="artifact2processsample2" briefDescription="" id="_nwyY4ZWYEeeYo5XPt1jj6A" orderingGuide="" presentationName="Artifact2ProcessSample2" suppressed="false" isAbstract="false" variabilityType="na">
+        <MethodElementProperty name="me_edited" value="true"/>
+      </ContentElement>
+    </MethodPackage>
+    <MethodPackage xsi:type="uma:ContentPackage" name="rolesprocesssample2" briefDescription="" id="_bT_hAJWYEeeYo5XPt1jj6A" orderingGuide="" presentationName="RolesProcessSample2" suppressed="false" global="false">
+      <MethodElementProperty name="pkg_loadCheck" value="true"/>
+      <MethodElementProperty name="me_edited" value="true"/>
+      <ContentElement xsi:type="uma:Role" name="role1processsample2" briefDescription="" id="_vGKrAJWYEeeYo5XPt1jj6A" orderingGuide="" presentationName="Role1ProcessSample2" suppressed="false" isAbstract="false" variabilityType="na">
+        <MethodElementProperty name="me_edited" value="true"/>
+      </ContentElement>
+      <ContentElement xsi:type="uma:Role" name="role2processsample2" briefDescription="" id="_vGKrAZWYEeeYo5XPt1jj6A" orderingGuide="" presentationName="Role2ProcessSample2" suppressed="false" isAbstract="false" variabilityType="na">
+        <MethodElementProperty name="me_edited" value="true"/>
+      </ContentElement>
+    </MethodPackage>
+    <MethodPackage xsi:type="uma:ContentPackage" name="tasksprocesssample2" briefDescription="" id="_i09YEJWYEeeYo5XPt1jj6A" orderingGuide="" presentationName="TasksProcessSample2" suppressed="false" global="false">
+      <MethodElementProperty name="pkg_loadCheck" value="true"/>
+      <MethodElementProperty name="me_edited" value="true"/>
+      <ContentElement xsi:type="uma:Task" name="task1processsample2" briefDescription="" id="_IAz4wJWbEeeYo5XPt1jj6A" orderingGuide="" presentationName="Task1ProcessSample2" suppressed="false" isAbstract="false" variabilityType="na">
+        <MethodElementProperty name="me_edited" value="true"/>
+      </ContentElement>
+      <ContentElement xsi:type="uma:Task" name="task2processsample2" briefDescription="" id="_NT7YMJWbEeeYo5XPt1jj6A" orderingGuide="" presentationName="Task2ProcessSample2" suppressed="false" isAbstract="false" variabilityType="na">
+        <MethodElementProperty name="me_edited" value="true"/>
+      </ContentElement>
+    </MethodPackage>
+    <MethodPackage xsi:type="uma:ProcessComponent" name="Activity1ProcessSample2" briefDescription="" id="_PQu4kJWaEeeYo5XPt1jj6A" orderingGuide="" presentationName="" suppressed="false" global="false" authors="" changeDescription="" version="">
+      <MethodElementProperty name="pkg_loadCheck" value="true"/>
+      <MethodElementProperty name="me_edited" value="true"/>
+      <Process xsi:type="uma:CapabilityPattern" name="Activity1ProcessSample2" briefDescription="" id="_PQu4kZWaEeeYo5XPt1jj6A" orderingGuide="" presentationName="Activity1ProcessSample2" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="true" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" variabilityType="na" diagramURI="ProcessSample2/capabilitypatterns/Activity1ProcessSample2/diagram.xmi">
+        <Presentation xsi:type="uma:ProcessDescription" name="Activity1ProcessSample2,_PQu4kZWaEeeYo5XPt1jj6A" briefDescription="" id="-5hKAdQUCfp-9uRAQZLiasg" orderingGuide="" presentationName="" suppressed="false" authors="" changeDescription="" version="" externalId="" usageGuidance="">
+          <MainDescription></MainDescription>
+          <KeyConsiderations></KeyConsiderations>
+          <Alternatives></Alternatives>
+          <HowToStaff></HowToStaff>
+          <Purpose></Purpose>
+          <Scope></Scope>
+          <UsageNotes></UsageNotes>
+        </Presentation>
+        <BreakdownElement xsi:type="uma:TaskDescriptor" name="task1processsample2" briefDescription="" id="_DwiPAJWeEeeYo5XPt1jj6A" orderingGuide="" presentationName="Task1ProcessSample2" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="false" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" isSynchronizedWithSource="true">
+          <MethodElementProperty name="me_references" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;me_references udtList=&quot;&quot;/>"/>
+          <SuperActivity>_PQu4kZWaEeeYo5XPt1jj6A</SuperActivity>
+          <Task>_IAz4wJWbEeeYo5XPt1jj6A</Task>
+        </BreakdownElement>
+        <BreakdownElement xsi:type="uma:TaskDescriptor" name="task2processsample2" briefDescription="" id="_Dwi2EJWeEeeYo5XPt1jj6A" orderingGuide="" presentationName="Task2ProcessSample2" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="false" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" isSynchronizedWithSource="true">
+          <MethodElementProperty name="me_references" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;me_references udtList=&quot;&quot;/>"/>
+          <SuperActivity>_PQu4kZWaEeeYo5XPt1jj6A</SuperActivity>
+          <Predecessor id="_zmMnAJWgEeeYo5XPt1jj6A" linkType="finishToStart">_DwiPAJWeEeeYo5XPt1jj6A</Predecessor>
+          <Task>_NT7YMJWbEeeYo5XPt1jj6A</Task>
+        </BreakdownElement>
+      </Process>
+    </MethodPackage>
+    <MethodPackage xsi:type="uma:ProcessComponent" name="Activity2ProcessSample2" briefDescription="" id="_YJfB8JWaEeeYo5XPt1jj6A" orderingGuide="" presentationName="" suppressed="false" global="false" authors="" changeDescription="" version="">
+      <MethodElementProperty name="pkg_loadCheck" value="true"/>
+      <MethodElementProperty name="me_edited" value="true"/>
+      <Process xsi:type="uma:CapabilityPattern" name="Activity2ProcessSample2" briefDescription="" id="_YJfB8ZWaEeeYo5XPt1jj6A" orderingGuide="" presentationName="Activity2ProcessSample2" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="true" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" variabilityType="na" diagramURI="ProcessSample2/capabilitypatterns/Activity2ProcessSample2/diagram.xmi">
+        <Presentation xsi:type="uma:ProcessDescription" name="Activity2ProcessSample2,_YJfB8ZWaEeeYo5XPt1jj6A" briefDescription="" id="-U8Z44fRAzaD0ygqi32aiuw" orderingGuide="" presentationName="" suppressed="false" authors="" changeDescription="" version="" externalId="" usageGuidance="">
+          <MainDescription></MainDescription>
+          <KeyConsiderations></KeyConsiderations>
+          <Alternatives></Alternatives>
+          <HowToStaff></HowToStaff>
+          <Purpose></Purpose>
+          <Scope></Scope>
+          <UsageNotes></UsageNotes>
+        </Presentation>
+        <BreakdownElement xsi:type="uma:TaskDescriptor" name="task1processsample2" briefDescription="" id="_-eC6UJWgEeeYo5XPt1jj6A" orderingGuide="" presentationName="Task1ProcessSample2" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="false" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" isSynchronizedWithSource="true">
+          <MethodElementProperty name="me_references" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;me_references udtList=&quot;&quot;/>"/>
+          <SuperActivity>_YJfB8ZWaEeeYo5XPt1jj6A</SuperActivity>
+          <Predecessor id="_EHbksZWhEeeYo5XPt1jj6A" linkType="finishToStart">_-eC6UZWgEeeYo5XPt1jj6A</Predecessor>
+          <Task>_IAz4wJWbEeeYo5XPt1jj6A</Task>
+        </BreakdownElement>
+        <BreakdownElement xsi:type="uma:TaskDescriptor" name="task2processsample2" briefDescription="" id="_-eC6UZWgEeeYo5XPt1jj6A" orderingGuide="" presentationName="Task2ProcessSample2" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="false" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" isSynchronizedWithSource="true">
+          <MethodElementProperty name="me_references" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;me_references udtList=&quot;&quot;/>"/>
+          <SuperActivity>_YJfB8ZWaEeeYo5XPt1jj6A</SuperActivity>
+          <Task>_NT7YMJWbEeeYo5XPt1jj6A</Task>
+        </BreakdownElement>
+      </Process>
+    </MethodPackage>
+    <MethodPackage xsi:type="uma:ProcessComponent" name="IterationProcessSample2" briefDescription="" id="_hvxmwJWaEeeYo5XPt1jj6A" orderingGuide="" presentationName="" suppressed="false" global="false" authors="" changeDescription="" version="">
+      <MethodElementProperty name="pkg_loadCheck" value="true"/>
+      <MethodElementProperty name="me_edited" value="true"/>
+      <Process xsi:type="uma:CapabilityPattern" name="IterationProcessSample2" briefDescription="" id="_hvxmwZWaEeeYo5XPt1jj6A" orderingGuide="" presentationName="IterationProcessSample2" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="true" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" variabilityType="na" diagramURI="ProcessSample2/capabilitypatterns/IterationProcessSample2/diagram.xmi">
+        <Presentation xsi:type="uma:ProcessDescription" name="IterationProcessSample2,_hvxmwZWaEeeYo5XPt1jj6A" briefDescription="" id="-Z2KrR9Q3XpXw8DHEJDMgcA" orderingGuide="" presentationName="" suppressed="false" authors="" changeDescription="" version="" externalId="" usageGuidance="">
+          <MainDescription></MainDescription>
+          <KeyConsiderations></KeyConsiderations>
+          <Alternatives></Alternatives>
+          <HowToStaff></HowToStaff>
+          <Purpose></Purpose>
+          <Scope></Scope>
+          <UsageNotes></UsageNotes>
+        </Presentation>
+        <BreakdownElement xsi:type="uma:Activity" name="Activity1ProcessSample2" briefDescription="" id="_cRTuwZWhEeeYo5XPt1jj6A" orderingGuide="" presentationName="Activity1ProcessSample2" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="true" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" variabilityBasedOnElement="_PQu4kZWaEeeYo5XPt1jj6A" variabilityType="extends">
+          <SuperActivity>_hvxmwZWaEeeYo5XPt1jj6A</SuperActivity>
+          <Predecessor id="_3agwsJWhEeeYo5XPt1jj6A" linkType="finishToStart">_cRTuw5WhEeeYo5XPt1jj6A</Predecessor>
+        </BreakdownElement>
+        <BreakdownElement xsi:type="uma:Activity" name="Activity2ProcessSample2" briefDescription="" id="_cRTuw5WhEeeYo5XPt1jj6A" orderingGuide="" presentationName="Activity2ProcessSample2" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="true" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" variabilityBasedOnElement="_YJfB8ZWaEeeYo5XPt1jj6A" variabilityType="extends">
+          <SuperActivity>_hvxmwZWaEeeYo5XPt1jj6A</SuperActivity>
+        </BreakdownElement>
+      </Process>
+    </MethodPackage>
+    <MethodPackage xsi:type="uma:ProcessComponent" name="ProcessSample2" briefDescription="" id="_vUCY4JTdEeerEY2cIj65GQ" orderingGuide="" presentationName="" suppressed="false" global="false" authors="" changeDescription="" version="">
+      <MethodElementProperty name="pkg_loadCheck" value="true"/>
+      <MethodElementProperty name="me_edited" value="true"/>
+      <Process xsi:type="uma:DeliveryProcess" name="ProcessSample2" briefDescription="" id="_vUCY4ZTdEeerEY2cIj65GQ" orderingGuide="" presentationName="ProcessSample2" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="true" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" variabilityType="na">
+        <Presentation xsi:type="uma:DeliveryProcessDescription" name="ProcessSample2,_vUCY4ZTdEeerEY2cIj65GQ" briefDescription="" id="-yiWtDD-bCgwK9QvNuxN4Uw" orderingGuide="" presentationName="" suppressed="false" authors="" changeDescription="" version="" externalId="" usageGuidance="">
+          <MainDescription></MainDescription>
+          <KeyConsiderations></KeyConsiderations>
+          <Alternatives></Alternatives>
+          <HowToStaff></HowToStaff>
+          <Purpose></Purpose>
+          <Scope></Scope>
+          <UsageNotes></UsageNotes>
+          <Scale></Scale>
+          <ProjectCharacteristics></ProjectCharacteristics>
+          <RiskLevel></RiskLevel>
+          <EstimatingTechnique></EstimatingTechnique>
+          <ProjectMemberExpertise></ProjectMemberExpertise>
+          <TypeOfContract></TypeOfContract>
+        </Presentation>
+        <BreakdownElement xsi:type="uma:Iteration" name="IterationProcessSample2" briefDescription="" id="_daGQ4JWjEeeYo5XPt1jj6A" orderingGuide="" presentationName="IterationProcessSample2" suppressed="false" isAbstract="false" hasMultipleOccurrences="false" isOptional="false" isPlanned="true" prefix="" isEventDriven="false" isOngoing="false" isRepeatable="false" variabilityBasedOnElement="_hvxmwZWaEeeYo5XPt1jj6A" variabilityType="extends">
+          <SuperActivity>_vUCY4ZTdEeerEY2cIj65GQ</SuperActivity>
+        </BreakdownElement>
+        <IncludesPattern>_hvxmwZWaEeeYo5XPt1jj6A</IncludesPattern>
+      </Process>
+    </MethodPackage>
+  </MethodPlugin>
+  <MethodConfiguration name="ProcessSampleConfiguration" briefDescription="" id="_z06REJWjEeeYo5XPt1jj6A" orderingGuide="" presentationName="" suppressed="false" authors="" changeDescription="" version="">
+    <MethodElementProperty name="TouchedByConfigEditor" value="true"/>
+    <MethodElementProperty name="Config_doneLoadCheckPkgs" value="_1uALoJTdEeerEY2cIj65GQ/_31IbsJWXEeeYo5XPt1jj6A/_3mO4kJTdEeerEY2cIj65GQ/_G_loMJTeEeerEY2cIj65GQ/_PQu4kJWaEeeYo5XPt1jj6A/_YJfB8JWaEeeYo5XPt1jj6A/_bT_hAJWYEeeYo5XPt1jj6A/_hvxmwJWaEeeYo5XPt1jj6A/_i09YEJWYEeeYo5XPt1jj6A/_jQuikJTeEeerEY2cIj65GQ/_km4dMJTeEeerEY2cIj65GQ/_tbKywJTdEeerEY2cIj65GQ/_vUCY4JTdEeerEY2cIj65GQ/_ycwdUJTdEeerEY2cIj65GQ"/>
+    <MethodElementProperty name="me_edited" value="true"/>
+    <MethodPluginSelection>_i5sKUJTYEeerEY2cIj65GQ</MethodPluginSelection>
+    <MethodPluginSelection>_oQiWYJTcEeerEY2cIj65GQ</MethodPluginSelection>
+    <MethodPackageSelection>_ycwdUJTdEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_G_loMJTeEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_jQuikJTeEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_km4dMJTeEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_i5sKXpTYEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_i5sKXZTYEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_3mO4kJTdEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_1uALoJTdEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_tbKywJTdEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_oQiWbZTcEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_hvxmwJWaEeeYo5XPt1jj6A</MethodPackageSelection>
+    <MethodPackageSelection>_vUCY4JTdEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_PQu4kJWaEeeYo5XPt1jj6A</MethodPackageSelection>
+    <MethodPackageSelection>_oQiWbpTcEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_bT_hAJWYEeeYo5XPt1jj6A</MethodPackageSelection>
+    <MethodPackageSelection>_YJfB8JWaEeeYo5XPt1jj6A</MethodPackageSelection>
+    <MethodPackageSelection>_31IbsJWXEeeYo5XPt1jj6A</MethodPackageSelection>
+    <MethodPackageSelection>_i09YEJWYEeeYo5XPt1jj6A</MethodPackageSelection>
+    <MethodPackageSelection>_i5sKXJTYEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_i5sKUZTYEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_1fOv8JXGEeea0Z7NGJurKQ</MethodPackageSelection>
+    <MethodPackageSelection>_i5sKUpTYEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_i5sKWJTYEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_i5sKWpTYEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_oQiWbJTcEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_oQiWYZTcEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_1fYg8JXGEeea0Z7NGJurKQ</MethodPackageSelection>
+    <MethodPackageSelection>_oQiWYpTcEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_oQiWaJTcEeerEY2cIj65GQ</MethodPackageSelection>
+    <MethodPackageSelection>_oQiWapTcEeerEY2cIj65GQ</MethodPackageSelection>
+    <ProcessView>_fZGAEJWWEeeYo5XPt1jj6A</ProcessView>
+    <ProcessView>_KUZo0JWXEeeYo5XPt1jj6A</ProcessView>
+  </MethodConfiguration>
+</uma:MethodLibrary>

@@ -3,7 +3,7 @@ importXMLDocument: document
 	"
 	self new importXMLDocument: (Smalltalk at: #MyDocument)
 	"
-	| processes deliveryProcesses pmDeliveryProcesses capabilityPatterns pmCapabilityPatterns tasks pmTasks guidelines concepts pmConcepts pmModel pmGuidelines contentElements pmContentElements roles pmRoles artifacts pmArtifacts templates pmTemplates activities pmActivities breakdownElements taskDescriptors pmTaskDescriptors pmBreakdownElements deliverables pmDeliverables taskinuse entities tempArtifacts tempInputArtifacts tempOutputArtifacts tempTasks tempRoles tempPMRoles tempPMTasks |
+	| processes deliveryProcesses pmDeliveryProcesses iterations pmIterations capabilityPatterns pmCapabilityPatterns tasks pmTasks guidelines concepts pmConcepts pmModel pmGuidelines contentElements pmContentElements roles pmRoles artifacts pmArtifacts templates pmTemplates activities pmActivities breakdownElements taskDescriptors pmTaskDescriptors pmBreakdownElements deliverables pmDeliverables taskinuse entities tempArtifacts tempInputArtifacts tempOutputArtifacts tempTasks tempRoles tempPMRoles tempPMTasks |
 	
 	processes := document // #Process.
 	contentElements := document // #ContentElement.
@@ -19,7 +19,9 @@ importXMLDocument: document
 	pmContentElements := contentElements collect: [:xmlElement | 
 									PMContentElement fromXMLDescription: xmlElement].
    pmBreakdownElements := breakdownElements collect: [:xmlElement | 
-									PMBreakdownElement fromXMLDescription: xmlElement].	
+									PMBreakdownElement fromXMLDescription: xmlElement].
+	iterations := breakdownElements select: [:el | (el attributeAt: #xsi:type) = 'uma:Iteration' ].
+	pmIterations := iterations collect: [:xmlElement | PMIteration fromXMLDescription: xmlElement].
 
 	tasks := contentElements select: [:el | (el attributeAt: #xsi:type) = 'uma:Task' ].
 	pmTasks := tasks collect: [:xmlElement | PMTask fromXMLDescription: xmlElement].
@@ -185,8 +187,8 @@ importXMLDocument: document
 	
 	
 	activities do:[:activity1 |
-		"Super-actividades de tareas a actividades:"
 		activities do: [:activity2 |
+			"Super-actividades de tareas a actividades:"
       	    (((activity1 / #SuperActivity) first ifNotNil: [:output | output nodes first]) asString = (activity2 attributeAt: #variabilityBasedOnElement) asString)
 			 ifTrue:[
                pmActivities do: [ :pmActivity1 |
@@ -203,6 +205,7 @@ importXMLDocument: document
 	                    ]
                ]
 			 ].
+			"Predecesores de actividades a actividades:"
 			 (((activity1 / #Predecessor) first ifNotNil: [:output | output nodes first]) asString = (activity2 attributeAt: #id) asString)
 			 ifTrue:[
                pmActivities do: [ :pmActivity1 |
@@ -229,7 +232,49 @@ importXMLDocument: document
                ] 
          ].
 		].
+		"Super-actividades de actividades a iteraciones:"
+		iterations do: [ :iteration |
+			(((activity1 / #SuperActivity) first ifNotNil: [:output | output nodes first]) asString = (iteration attributeAt: #variabilityBasedOnElement) asString)
+			 ifTrue:[
+               pmActivities do: [ :pmActivity1 |
+	                (((activity1 attributeAt: #id) asString) = pmActivity1 id asString)
+                       ifTrue: [
+	                        "pmTaskDescriptor addSuperActivity: pmActivity"
+	                        pmIterations do: [ :pmIteration |
+	                            (((iteration attributeAt: #id) asString) = pmIteration id asString)
+                                  ifTrue: [ 
+	                                  pmActivity1 addSuperActivity: pmIteration.
+												pmIteration addContainedActivity: pmActivity1.
+	                               ]
+                           ]
+	                    ]
+               ]
+			 ]. 
+		].
 	].
+
+	"Super-actividades de iteraciones a delivery processes:"
+	deliveryProcesses do: [ :deliveryProcess |
+	iterations do: [ :iteration |
+			(((iteration / #SuperActivity) first ifNotNil: [:output | output nodes first]) asString = (deliveryProcess attributeAt: #id) asString)
+			 ifTrue:[
+               pmDeliveryProcesses do: [ :pmDeliveryProcess |
+	                (((deliveryProcess attributeAt: #id) asString) = pmDeliveryProcess id asString)
+                       ifTrue: [
+	                        "pmTaskDescriptor addSuperActivity: pmActivity"
+	                        pmIterations do: [ :pmIteration |
+	                            (((iteration attributeAt: #id) asString) = pmIteration id asString)
+                                  ifTrue: [ 
+	                                  pmIteration addSuperActivity: pmDeliveryProcess.
+												pmDeliveryProcess addContainedIteration: pmIteration.
+	                               ]
+                           ]
+	                    ]
+               ]
+			 ]. 
+		].
+	 ].
+	
 
 	"FIN DE IMPLEMENTACIONES DE SUPERACTIVIDADES Y PREDECESORES ENTRE TAREAS Y PATRONES DE CAPACIDAD"
 	
@@ -247,6 +292,7 @@ importXMLDocument: document
 						taskDescriptors: pmTaskDescriptors;
 						breakdownElements: pmBreakdownElements;
 						usedtasks: taskinuse;
+						iterations: pmIterations;
 						entities: entities.
 	
 	"Reasignando pmModel a cada uno de sus elementos para pasar las métricas de todo el modelo a los planos generados por cada actividad."
@@ -259,6 +305,7 @@ importXMLDocument: document
 	pmModel activities: (pmModel activities collect: [ :pmActivity | pmActivity myModel: pmModel ]).
 	pmModel deliveryProcesses: (pmModel deliveryProcesses collect: [ :pmDeliveryProcess | pmDeliveryProcess myModel: pmModel ]).
 	pmModel capabilityPatterns: (pmModel capabilityPatterns collect: [ :pmCapabilityPattern | pmCapabilityPattern myModel: pmModel ]).
+	pmModel iterations: (pmModel iterations collect: [ :pmIteration | pmIteration myModel: pmModel ]).
 	pmModel.
 	
 	"pmModel resolveReferences.

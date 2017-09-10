@@ -1,10 +1,14 @@
 {
 	"instance" : {
+		"containedIterations" : "jjalvarezl 9/9/2017 23:53",
 		"addContainedActivity:" : "jjalvarezl 9/8/2017 13:53",
-		"initialize" : "jjalvarezl 9/8/2017 13:53",
+		"initialize" : "jjalvarezl 9/10/2017 01:07",
+		"addContainedIteration:" : "jjalvarezl 9/10/2017 01:07",
+		"containedIterationsGroup" : "jjalvarezl 9/9/2017 23:55",
 		"containedActivities:" : "jjalvarezl 9/8/2017 13:52",
 		"containedActivities" : "jjalvarezl 9/8/2017 13:52",
-		"containedActivitiesGroup" : "jjalvarezl 9/8/2017 15:21"
+		"containedActivitiesGroup" : "jjalvarezl 9/8/2017 15:21",
+		"containedIterations:" : "jjalvarezl 9/9/2017 23:53"
 	},
 	"class" : {
 		"fromXMLDescription:" : "jjalvarezl 9/7/2017 23:26"
