@@ -3,7 +3,7 @@ containedActivitiesGroup
 	<navigation: 'All contained activities'>
 	| pmActivityGroup |
 	pmActivityGroup := PMActivityGroup 
-		withAll: self containedActivities 
+		withAll: self allContainedActivities 
 		withDescription: 'Activities contained in ', self printString.
 	pmActivityGroup myModel: self myModel.
 		

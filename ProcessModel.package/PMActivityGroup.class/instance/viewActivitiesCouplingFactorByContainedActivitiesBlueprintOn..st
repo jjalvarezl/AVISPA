@@ -62,7 +62,7 @@ viewActivitiesCouplingFactorByContainedActivitiesBlueprintOn: view
 	legend addLineColor: Color blue text:'Predecessors'.
 	legend addLineColor: Color red text:'Super Activity'.
 	legend addText: ''.
-	legend addRectanglePolymetricWidth: '#precedenceDependencesBetweenActivities' height: '#dependencesOfArtifactss' box: 'Activity'.
+	legend addRectanglePolymetricWidth: '#precedenceDependencesBetweenActivities' height: '#dependencesOfArtifacts' box: 'Activity'.
 	legend addColorFadingFrom: Color black to: Color green text: 'activity coupling factor by contained activities by each activity (box)'.
 	
 	legend build

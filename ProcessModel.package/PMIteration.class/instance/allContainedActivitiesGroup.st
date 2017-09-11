@@ -1,10 +1,10 @@
 accessing
-containedActivitiesGroup
+allContainedActivitiesGroup
 	<navigation: 'All contained activities'>
 	| pmActivityGroup |
 	pmActivityGroup := PMActivityGroup 
-		withAll: self containedActivities 
-		withDescription: 'Artifacts contained in ', self printString.
+		withAll: self allContainedActivities 
+		withDescription: 'Activities contained in ', self printString.
 	pmActivityGroup myModel: self myModel.
 		
 	^ pmActivityGroup.

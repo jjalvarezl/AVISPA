@@ -1,13 +1,15 @@
 {
 	"instance" : {
-		"addSuperActivity:" : "jjalvarezl 9/9/2017 23:44",
-		"addContainedActivity:" : "jjalvarezl 9/9/2017 23:44",
-		"initialize" : "jjalvarezl 9/10/2017 00:10",
 		"superActivities" : "jjalvarezl 9/9/2017 23:41",
 		"containedActivities:" : "jjalvarezl 9/9/2017 23:41",
+		"addSuperActivity:" : "jjalvarezl 9/9/2017 23:44",
+		"superActivities:" : "jjalvarezl 9/9/2017 23:41",
+		"initialize" : "jjalvarezl 9/10/2017 00:10",
+		"addContainedActivity:" : "jjalvarezl 9/9/2017 23:44",
 		"containedActivities" : "jjalvarezl 9/9/2017 23:41",
-		"containedActivitiesGroup" : "jjalvarezl 9/10/2017 00:15",
-		"superActivities:" : "jjalvarezl 9/9/2017 23:41"
+		"allContainedActivities" : "jjalvarezl 9/11/2017 10:58",
+		"allContainedActivitiesGroup" : "jjalvarezl 9/11/2017 10:59",
+		"allContainedActivities:" : "jjalvarezl 9/11/2017 10:58"
 	},
 	"class" : {
 		"fromXMLDescription:" : "jjalvarezl 9/9/2017 23:48"

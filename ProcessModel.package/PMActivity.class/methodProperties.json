@@ -8,7 +8,7 @@
 		"allOutputArtifacts" : "jjalvarezl 9/6/2017 11:36",
 		"mooseFinderTaskWarningBlueprintIn:" : "JhonJairoAlvarez 9/2/2017 00:40",
 		"mooseFinderArtifactBlueprintIn:" : "JhonJairoAlvarez 9/1/2017 16:47",
-		"allContainedActivities" : "jjalvarezl 9/8/2017 14:27",
+		"allContainedActivities" : "jjalvarezl 9/11/2017 10:57",
 		"numberOfContainedArtifacts" : "jjalvarezl 9/8/2017 16:06",
 		"numberOfOutputDependencesOfArtifacts" : "jjalvarezl 9/6/2017 14:36",
 		"addContainedActivity:" : "JhonJairoAlvarez 8/29/2017 17:08",
@@ -48,7 +48,8 @@
 		"mooseFinderTaskBlueprintGuidelinesIn:" : "JhonJairoAlvarez 9/1/2017 18:59",
 		"numberOfContainedActivities" : "jjalvarezl 9/8/2017 16:06",
 		"allContainedTasks" : "JhonJairoAlvarez 8/29/2017 17:37",
-		"allContainedActivities:" : "jjalvarezl 9/8/2017 14:28",
+		"allContainedActivities:" : "jjalvarezl 9/11/2017 10:56",
+		"containedActivities" : "jjalvarezl 9/11/2017 10:46",
 		"mooseFinderTaskBlueprintClusterIn:" : "JhonJairoAlvarez 9/1/2017 17:42",
 		"superActivities" : "JhonJairoAlvarez 8/29/2017 14:05"
 	},
