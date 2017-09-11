@@ -181,7 +181,7 @@ In x64 is necessary to install libraries to run moose because it is builded on x
 You can install software packages that replace ia32-libs. This solution has been mentionend on StackOverflow forums:
 
 ```bash
-$ sudo apt-get install gcc-multilib)
+$ sudo apt-get install gcc-multilib
 ```
 but problem can persist, and is solved in the following troubleshooting:
 
