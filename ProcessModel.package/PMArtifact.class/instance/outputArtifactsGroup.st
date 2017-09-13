@@ -1,6 +1,6 @@
 navigation
 outputArtifactsGroup
-	<navigation: 'Output artifacts'>
+	"<navigation: 'Output artifacts'>"
 	
 	^ (PMArtifactGroup withAll: self outputArtifacts)
 		myModel: self myModel;

@@ -22,8 +22,8 @@ viewTasksInActivitiesBlueprintOn: view
 		nodes: self
 		forEach: [ :anActivity | 
 			b shape box
-				width: [ :aTask | aTask numberOfArtifactOutputs * 5 ];
-				height: [ :aTask | aTask numberOfArtifactMandatoryInputs * 5 ].
+				width: [ :aTask | aTask numberOfArtifactOutputs ];
+				height: [ :aTask | aTask numberOfArtifactMandatoryInputs ].
 			b nodes: anActivity allContainedTasks.
 			b layout grid
 
@@ -49,7 +49,7 @@ viewTasksInActivitiesBlueprintOn: view
 	legend := RTLegendBuilder new.
 	legend view: b view.
 	legend addText: '*****Tasks by activities*****'.
-	legend addText: 'Each big box is an artifact containing each respective tasks (contained ones)'.
+	legend addText: 'Each big box is an artifact containing each respective tasks (contained boxes)'.
 	"legend addColor: Color red text: 'Tasks not used Task in use'.
 	legend addColor: Color green text: 'Tasks in use and Tasks'.
 	legend addLineColor: Color gray text:'Task Artefact Flow'."
@@ -61,6 +61,7 @@ viewTasksInActivitiesBlueprintOn: view
 	legend addText: '*****Task contained in an activity*****'.
 	legend addText: 'Each box contained in each activity box is a task'.
 	legend addRectanglePolymetricWidth: 'artifactsProduced' height: 'artifactsConsumed' box: 'Task'.
+	legend addColorFadingFrom: Color gray to: Color red text: 'desviationOutputArtifacts (gray is lower value, red is higher value)'.
 	
 	"legend addText: 'If task box is red colored, then task is overloaded, otherwise not'."
 	legend build

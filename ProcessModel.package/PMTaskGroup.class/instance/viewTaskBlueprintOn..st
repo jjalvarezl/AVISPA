@@ -34,9 +34,9 @@ viewTaskBlueprintOn: aView
 	legend view: b view.
 	legend textSize:6.
 	legend addText: 'Task Blueprint'.
-	legend addRectanglePolymetricWidth: '#WArtefactsProduced' height: '#ArtefactsConsumed' box: 'Task'.
+	legend addRectanglePolymetricWidth: '#ArtefactsProduced' height: '#ArtefactsConsumed' box: 'Task'.
    legend addLineColor: Color black text: 'Artefact Flow'.
-   legend addColor: Color gray text:'#RolesInvolved'.
+   legend addColorFadingFrom: Color gray to: Color black text:'#RolesInvolved'.
    
 "   legend below.
    legend left."

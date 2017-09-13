@@ -22,8 +22,8 @@ viewArtifactsInActivitiesBlueprintOn: view
 		nodes: self
 		forEach: [ :anActivity | 
 			b shape box
-				width: [ :anArtifact | anArtifact numberOfOutputTasks * 5 ];
-				height: [ :anArtifact | anArtifact numberOfOutputTasks * 5 ].
+				width: [ :anArtifact | anArtifact numberOfOutputTasks ];
+				height: [ :anArtifact | anArtifact numberOfOutputTasks ].
 			b nodes: anActivity allContainedArtifacts.
 			b layout grid
 

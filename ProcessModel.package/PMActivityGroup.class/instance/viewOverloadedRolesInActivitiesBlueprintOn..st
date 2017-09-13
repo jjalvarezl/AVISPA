@@ -1,6 +1,7 @@
 vizualization
 viewOverloadedRolesInActivitiesBlueprintOn: view
-	| b legend sum average sumstandard standardsigma |
+	| b legend sum average sumstandard standardsigma overloadedRoles |
+	overloadedRoles := 0.
 	b := RTMondrian new.
 	b view: view.
 	"No funciona la siguiente linea, no se muestran los predecesores."
@@ -28,11 +29,14 @@ viewOverloadedRolesInActivitiesBlueprintOn: view
 			anActivity myModel roles do:[:each | sumstandard:= sumstandard + ((average - (each numberOfTasks )) squared)].
 	      standardsigma  := ((sumstandard/(anActivity allContainedRoles size))) sqrt.
 			b shape box
-				width: [ :aRole | aRole numberOfAssociatedArtifacts * 5 ];
-				height: [ :aRole | aRole numberOfTasks * 5 ];
+				width: [ :aRole | aRole numberOfAssociatedArtifacts ];
+				height: [ :aRole | aRole numberOfTasks ];
 				fillColor: [ :aRole | 
 					((aRole numberOfTasks) > standardsigma)
-						ifTrue: [ Color red ]
+						ifTrue: [ 
+							overloadedRoles := overloadedRoles +1. 
+							Color red
+						]
 						ifFalse: [ Color white ] ].
 			b nodes: anActivity allContainedRoles.
 			b layout grid
@@ -67,5 +71,6 @@ viewOverloadedRolesInActivitiesBlueprintOn: view
 	legend addText: '*****Role contained in an activity*****'.
 	legend addText: 'Each box contained in each activity box is a role'.
 	legend addRectanglePolymetricWidth: 'Associated Artifacts' height: 'Tasks' box: 'Role'.
-	legend addText: 'If task box is red colored, then task is overloaded, otherwise not'.
+	legend addText: 'If task box is red colored, then role is overloaded, otherwise not'.
+	legend addText: 'Total overloaded role matches by each activity: ' , overloadedRoles asString.
 	legend build

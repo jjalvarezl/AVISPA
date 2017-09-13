@@ -1,6 +1,6 @@
 navigation
 outputTasksGroup
-	<navigation: 'Output tasks'>
+	<navigation: 'Tasks where this artifact is an output'>
 	
 	^ (PMTaskGroup withAll: self outputTasks)
 		myModel: self myModel;
