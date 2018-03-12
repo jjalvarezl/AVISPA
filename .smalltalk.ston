@@ -2,7 +2,7 @@ SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'ProcessModel',
-      #repository : 'http://smalltalkhub.com/mc/abergel/Avispa/main',
+      #repository : 'http://smalltalkhub.com/mc/abergel/Avispa/',
       #platforms : [ #pharo ]
     }
   ]
