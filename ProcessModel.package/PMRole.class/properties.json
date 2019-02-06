@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"tasks",
-		"artifacts"
+		"artifacts",
+		"responsibleArtifacts"
 	],
 	"name" : "PMRole",
 	"type" : "normal"

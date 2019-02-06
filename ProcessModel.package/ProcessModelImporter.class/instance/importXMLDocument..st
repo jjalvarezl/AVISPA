@@ -89,27 +89,49 @@ importXMLDocument: document
 	
 	"INICIO DE CORRELACIONES DE ANIDACION ENTRE TAREAS, ROLES Y ARTEFACTOS:"
 	
-	"Inicio de correlaciones. Asignando artefactos a los roles:"
+	"pmRoles."
+	"self halt."
+	
+	"Inicio de correlaciones. Asignando artefactos a los roles responsables de los mismos:"
 	"Primer ciclo, lee cada uno de los roles en el atributo 'roles'"
 	tempArtifacts := OrderedCollection new.
 	roles do:[ :role |
+		
 		"Segundo ciclo for compara el id del ResposibleFor con cada uno de los roles"
 		pmArtifacts do: [ :tempPMArtifact | 
 			"Encontrando si existe alguna coincidencia de algun id de algun elemento en PMArtifacts con algun rol xml plano cuyo ResponsibleFor concuerde con dicho id."
-			((tempPMArtifact id asString) = ((role / #ResponsibleFor) first ifNotNil: [:output | output nodes first]) asString) 
-				"si la condición es verdadera almacene en una variable temporal los PMArtifact respectivos"
-				ifTrue: [ tempArtifacts add: tempPMArtifact ] 
+			(role / #ResponsibleFor) do: [ :resposibleArtifactFromRole |
+				((tempPMArtifact id asString) = ((resposibleArtifactFromRole nodes first) asString))
+					ifTrue: [ 
+						tempArtifacts add: tempPMArtifact.
+						tempArtifacts.
+						"self halt." 
+					].
+			].
 		].
-		"Una vez teniendo todos los tempArtifacts del presente rol, almacenelo en el respectivo PMRole."
-		tempPMRoles := PMRole fromXMLDescription: role.
-		pmRoles do: [ :pmRole | 
-			   (pmRole id asString = tempPMRoles id asString)
-					ifTrue: [ pmRole artifacts: tempArtifacts ]
+	
+	   (tempArtifacts size > 0)
+			ifTrue: [ 
+				"Una vez teniendo todos los tempArtifacts del presente rol, almacenelo en el respectivo PMRole."
+				tempPMRoles := PMRole fromXMLDescription: role.
+				pmRoles do: [ :pmRole | 
+			   		(pmRole id asString = tempPMRoles id asString)
+						ifTrue: [ 						
+							"A cada uno de los artifacts en pmRole se le añade el presente rol"
+							tempArtifacts do:[ :pmArtifact |
+								pmArtifact addResponsibleRole: pmRole.
+							].
+					
+							"Se añaden todos los tempArtifacts al pmRole"
+							pmRole responsibleArtifacts: tempArtifacts.
+						].
+				].
 			].
 		"Reiniciar el tempArtifacts para la próxima iteración"
 		tempArtifacts := OrderedCollection new.
 	].
 	pmRoles. "No hace nada, solo para inspeccionar si verdaderamente funciona."
+	"self halt."
 	"Fin de correlaciones. Asignando artefactos a los roles"
 	
 	"Inicio de correlaciones. Asignando roles, artefactos de entrada y de salida a las tareas:"
@@ -132,13 +154,16 @@ importXMLDocument: document
 		pmTasks do: [ :pmTask | 
 			   (pmTask id asString = tempPMTasks id asString)
 					ifTrue: [ 
+						"Asignando roles que ejecutan a la tarea"
 						pmTask roles: tempRoles. 
+						"Asignando artefactos de entrada a la tarea"
 						tempInputArtifacts do: [ :tempInputArtifact |  
 							tempTasks := OrderedCollection new.
 							tempTasks := tempInputArtifact inputTasks. 
 							tempTasks add: pmTask.
 							tempInputArtifact inputTasks: tempTasks.
 						].
+					   "Asignando artefactos de salida a la tarea"
 						tempOutputArtifacts do: [ :tempOutputArtifact |  
 							tempTasks := OrderedCollection new.
 							tempTasks := tempOutputArtifact outputTasks. 
@@ -147,6 +172,13 @@ importXMLDocument: document
 						].
 						pmTask artifactMandatoryInputs: tempInputArtifacts.
 						pmTask artifactOutputs: tempOutputArtifacts.
+						
+						"Asignando artefactos que los roles realizan: artefactos de salida de la tarea actual (que son los únicos que requiere esfuerzos de realización) con los roles de la tarea actual)"
+						pmTask roles do: [ :tempRole |
+							pmTask artifactOutputs do: [ :tempArtifact |
+								tempArtifact addPerformerRole: tempRole 
+						   ].
+						].
 					]
 			].
 		tempRoles := OrderedCollection new.
@@ -154,6 +186,7 @@ importXMLDocument: document
 		tempOutputArtifacts := OrderedCollection new.
 	].
    pmTasks. "No hace nada, solo para inspeccionar si verdaderamente funciona."
+	"self halt."
 	"Fin de correlaciones. Asignando roles, artefactos de entrada y de salida a las tareas"
 	
 	"FIN DE CORRELACIONES DE ANIDACION ENTRE TAREAS, ROLES Y ARTEFACTOS:"

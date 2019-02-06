@@ -1,5 +1,5 @@
 visualization
-viewArtifactWithoutRolesOn: aView
+viewArtifactResponsibleRolesOn: aView
 		"----------------------"
 	"We display the blueprint"
 	| coll mondrian legend |
@@ -10,7 +10,14 @@ viewArtifactWithoutRolesOn: aView
 	mondrian shape rectangle
 		borderColor: Color black;
 		borderWidth: 1;
-		fillColor:   [: each | each numberOfRoles = 0 ifTrue: [Color red] ifFalse: [Color white]] ; 
+		fillColor:   [: each | ((each responsibleRoles size) = 0) 
+			ifTrue: [Color blue] 
+			ifFalse: [
+				((each responsibleRoles size) >= 4)
+					ifTrue: [ Color red ]
+					ifFalse: [ Color white ].
+			].
+		] ; 
 		width: [ :each | each numberOfOutputTasks * 10 ];
 		height: [ :each | each numberOfInputTasks * 10 ].
 		"text: [:each | each presentationName ]."
@@ -21,8 +28,9 @@ viewArtifactWithoutRolesOn: aView
 	mondrian build.
 	legend := RTLegendBuilder new.
 	legend view: mondrian view.
-	legend addText: 'WorkProduct without Guidelines'.
+	legend addText: 'WorkProduct responsible roles'.
 	legend addRectanglePolymetricWidth: '#TasksAsOutput' height: '#TasksAsInput' box: 'WorkProduct'.
-	legend addColor: Color red text:'WorkProducts without Roles in charge of'.
+	legend addColor: Color blue text:'WorkProducts without roles in charge of'.
+	legend addColor: Color red text:'WorkProducts with 4 roles or more in charge of'.
 	legend addLineColor: Color gray text:'Artefact Dependence'.
 	legend build

@@ -15,7 +15,14 @@ viewOverloadPatternOn: mondrian
 	     width: [:each | each numberOfAssociatedArtifacts * 2];
 	     height: [:each | each numberOfTasks * 2];
 	     borderColor: Color black;
-	     fillColor:[:each | ((each  numberOfTasks ) > standardsigma) ifTrue: [Color red] ifFalse: [Color white]].
+	     fillColor:[:each | ((each  numberOfTasks ) > standardsigma) 
+		      ifTrue: [
+					 ((each responsibleArtifacts size) > 0)
+					      ifTrue: [ Color red ]
+			            ifFalse: [ Color yellow ].
+			   ]
+		      ifFalse: [Color white].
+		  ].
 	     "text: [:each | each presentationName ]."
    view nodes: self.
    view shape arrowedLine color: Color gray trans; withShorterDistanceAttachPoint.
@@ -26,6 +33,7 @@ viewOverloadPatternOn: mondrian
 	legend view: view view.
 	legend addText: 'Overloaded Roles Pattern'.
 	legend addRectanglePolymetricWidth: '#Associated Artifacts' height: '#Tasks' box: 'Role'.
-	legend addColor: Color red text:'Overload Roles'.
+	legend addColor: Color yellow text:'Overload roles'.
+	legend addColor: Color red text:'Overload roles with artifact responsability'.
 	legend addLineColor: Color gray text:'Role Cooperation'.
 	legend build

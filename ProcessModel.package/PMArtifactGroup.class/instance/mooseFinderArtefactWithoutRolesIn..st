@@ -2,8 +2,8 @@ moose finder
 mooseFinderArtefactWithoutRolesIn: composite
 	<moosePresentationOrder: 20>
 	composite roassal2
-			title: 'Artefact Without Roles';
+			title: 'Artefact Responsible Roles';
 			"titleIcon: MooseIcons mooseSystemComplexity;"
 			initializeView: [ RTView new ];
 			painting: [ :b :each | 
-				each viewArtifactWithoutRolesOn: b ]
+				each viewArtifactResponsibleRolesOn: b ]

@@ -9,7 +9,9 @@
 		"tasks",
 		"inputTasks",
 		"outputTasks",
-		"isDeliverable"
+		"isDeliverable",
+		"responsibleRoles",
+		"performerRoles"
 	],
 	"name" : "PMArtifact",
 	"type" : "normal"

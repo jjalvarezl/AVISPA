@@ -1,4 +1,3 @@
+accessing
 roles
-roles
-
-^ (tasks gather: [:t | t roles]) asSet
+	^ roles ifNil: [ roles := OrderedCollection new ]
